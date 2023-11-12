@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Jomhuria&family=Lalezar&family=Parisienne&family=Playball&family=Yeseva+One&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,
+   "Agbalumo",
+   "Jomhuria",
+  "Lalezar"
+  ,"Parisienne"
+  ,"Playball"
+  ,'Yeseva';
+
+  --ghermezTire:#800000;
+  --ghermezRoshan:#FF6666;
+  --abiTire:#008080;
+  --abiRoshan:#39FFFF;
+  --khakestariTire:#3B3B3B;
+  --khakestariRoshan:#808080;
+  --zardTire:#4e4614;
+  --zardRoshan:#FFDE2E;
+  --textShadow: -3px 1px 3px #4e4e4e, 3px 1px 3px #e2e2e0;
+  --boxShadow: 10px 0px 7px 2px #e2e2e0, -10px 0px 8px 0px #7a7770, -5px 0px 6px 0px #e2e2e0 inset, 4px 1px 12px 2px #7a7770 inset;
 }

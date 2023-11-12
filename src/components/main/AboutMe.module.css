@@ -1,0 +1,67 @@
+.container{
+}
+.aboutMe_Photo{
+    width:10rem;
+    top: 5rem;
+    position: fixed;
+    left: calc(50% - 16rem);
+    z-index: 1;
+    filter:drop-shadow( -3px 1px 3px #3d3d3d) ;
+
+}
+.aboutMe_title{
+    position: fixed;
+    left: calc(50% - 7.9rem);
+    top: 1.5rem;
+    font-family: Jomhuria;
+    font-size: 3rem;
+    color: var(--ghermezTire);
+    text-shadow: var(--textShadow);
+}
+.AboutMe_explain{
+    position: fixed;
+    list-style-type: none;
+    font-family: Lalezar;
+    text-align: right;
+    color: var(--ghermezTire);
+    left: calc(50% - 16rem);
+    top: 5rem;
+    text-shadow: var(--textShadow);
+}
+.AboutMe_explain li span{
+    color: var(--khakestariTire);
+    text-shadow: var(--textShadow);
+}
+.abilities_container{
+    position: fixed;
+    right: calc(50% - 22rem);
+    top: 0.3rem;
+    display:flex;
+    flex-direction: column;
+    
+}
+.abilities_container:hover{
+
+}
+.abilities_title{
+    text-align: right;
+    color: var(--zardRoshan);
+    text-shadow: var(--textShadow),2px 2px 2px #ffffff;
+    font-size: 2.5rem;
+    font-family: Lalezar;
+    margin-top: 2.5rem;
+
+}
+.abilities_explain{
+    flex-direction: row;
+    display: flex;
+list-style-type: none;
+margin-top: -10px;
+}
+
+.abilities_explain li img{
+width: 27px;
+height: 27px;
+margin-top: -10px;
+
+}
