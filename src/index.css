@@ -11,15 +11,21 @@ body {
   ,"Parisienne"
   ,"Playball"
   ,'Yeseva';
-
+  --fa1: "Jomhuria";
+  --fa2:"Lalezar";
+  --eng1:"Agbalumo";
+  --eng2:"Parisienne";
+  --eng3:"Playball";
+  --eng4:'Yeseva';
   --ghermezTire:#800000;
-  --ghermezRoshan:#FF6666;
-  --abiTire:#008080;
-  --abiRoshan:#39FFFF;
+  --ghermezRoshan:#b40000;
+  --abiTire:#1e4877;
+  --abiRoshan:#397eff;
   --khakestariTire:#3B3B3B;
   --khakestariRoshan:#808080;
-  --zardTire:#4e4614;
+  --zardTire:#857616;
   --zardRoshan:#FFDE2E;
-  --textShadow: -3px 1px 3px #4e4e4e, 3px 1px 3px #e2e2e0;
+  --textShadow: 0px 0px 2px #000;
   --boxShadow: 10px 0px 7px 2px #e2e2e0, -10px 0px 8px 0px #7a7770, -5px 0px 6px 0px #e2e2e0 inset, 4px 1px 12px 2px #7a7770 inset;
+  --neoShadow1: -3px 3px 10px #000e2488,inset 3px -3px 10px #000e2488,3px -3px 10px #fff,inset -3px 3px 10px #ffffffc5;
 }
