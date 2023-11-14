@@ -26,13 +26,17 @@ const AboutMe = () => {
     }
     const closeAll=(e)=>{
         if(!e.target.id){
-            setActived({
-                aboutMe:false,
-                projects:false,
-                abilities:false,
-            })
-            console.log(actived);
-        }}
+            setTimeout(() => {
+                setActived({
+                    aboutMe:false,
+                    projects:false,
+                    abilities:false,
+                })    
+            }, 1000);
+            
+        }
+        e.target.parentNode.classList.add(`${styles.fadeOut}`)
+    }
     return (
         <>
             <section >
@@ -56,19 +60,24 @@ const AboutMe = () => {
                     <img id="aboutMe" className={styles.aboutMe_Photo} src={myPhoto} alt='myphoto'/>
                     <h1 id="aboutMe" className={styles.aboutMe_title}>درباره من</h1>
                 </section>
-                    { actived.aboutMe &&
-                    <section  onEnded={styles.fadeOut} className={`${styles.main_section_visible} ${styles.fadeIn} `}>
-                    <img onEnded={styles.fadeOut} className={styles.aboutMe_explain_Photo} src={myPhoto} alt='myphoto'/>
-                        <ul className={`${styles.AboutMe_explain_text} ${styles.zoomIn}`}>
-                            <li>تخصص :   <span>برنامه نویس فرانت اند</span></li>
-                            <li>تاریخ تولد <span>5 اسفند 1373</span></li>
-                            <li>متولد:<span>شیراز،ایران</span></li>
-                            <li>تحصیلات:<span>لیسانس برق الکترونیک</span></li>
-                            <li>وجه تمایز :<span>خلاقیت </span></li>
-                        </ul>
-                            <button onClick={closeAll}>sssssssss</button>
+                { actived.aboutMe &&
+                    <section   className={`${styles.main_section_visible} ${styles.fadeIn} `}>
+                    <img  className={styles.aboutMe_explain_Photo} src={myPhoto} alt='myphoto'/>
+                        <h1 className={styles.aboutMe_explain_name}>علی نیرومند</h1>
+                        <section className={styles.aboutMe_explain_container}>
+                            <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
+                                <li>تخصص <br/>   <span>برنامه نویس فرانت اند</span></li>
+                                <li>تاریخ تولد<br/> <span>پنجم اسفند 1373</span></li>
+                            </ul>
+                            <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
+                                <li>متولد <br/><span>شیراز،ایران</span></li>
+                                <li>تحصیلات <br/><span>لیسانس برق الکترونیک</span></li>
+                                <li>وجه تمایز <br/><span>خلاقیت </span></li>
+                            </ul>
+                        </section>
+                                <button className={styles.closeAll} onClick={closeAll}>برگشت</button>
                     </section>
-                    }
+                }
                 <section onClick={activing} id='abilities' className={styles.abilities_container}>
                     <h1 id='abilities' className={styles.abilities_title}>مهارت ها </h1>
                     <ul id='abilities' className={styles.abilities_explain}>
@@ -83,7 +92,7 @@ const AboutMe = () => {
                 </section>
                     { actived.abilities &&
                     <section   className={styles.main_section_visible}>
-                            <button onClick={closeAll}>sssssssss</button>
+                            <button  onClick={closeAll}>sssssssss</button>
                     </section>
                     }
                 <section onClick={activing} id='projects' className={styles.projects_container}>

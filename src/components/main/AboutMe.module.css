@@ -1,6 +1,6 @@
 .main_section_visible{
 backdrop-filter:blur(3px);
-background-color: rgba(46, 46, 46, 0.561);
+background-color: rgba(0, 0, 0, 0.856);
 height: 100%;
 width: 100%;
 z-index: 10;
@@ -53,33 +53,82 @@ padding: 20px 0 0 30px;
     top: 7rem;
     font-size: 2.7rem;
     color: var(--abiTire);
-    text-shadow: 0px 0px 2px #ffffff;
+    text-shadow: var(--textShadow);
     transform: rotate(270deg);
 }
-.AboutMe_explain_text{
+.closeAll{
     position: fixed;
-    list-style-type: none;
-    font-family: Lalezar;
-    text-align: right;
-    color: var(--ghermezTire);
-    left: calc(50% - 15rem);
     top: 5rem;
+    left: 2rem;
+    width: 17rem;
+    height: 2rem;
+    font-size: 1.8rem;
+    font-family: var(--fa1);
+    border-radius: 30px;
+    background: none;
+    color: var(--khakestariRoshan);
+    box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan);
+    border: none;
+}
+.closeAll:hover{
+    box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan),0 0 60px var(--khakestariRoshan);
+    border: 1px solid var(--khakestariRoshan);
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    transition: 0.3s;
+    background: var(--khakestariRoshan);
+    color: var(--khakestariTire);
+
+}
+.aboutMe_explain_container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.AboutMe_explain_text{
+    list-style-type: none;
+    font-family: var(--fa1);
+    text-align: right;
     text-shadow: var(--textShadow);
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8rem;
+    padding-inline: 2rem;
+}
+.aboutMe_explain_container ul:first-child{
+    text-align:left;
+
 }
 .AboutMe_explain_text li span{
-    color: var(--abiTire);
-    text-shadow: var(--textShadow);
+    color: var(--khakestariRoshan);
+    text-shadow: var(--textShadowDark);
 }
 .aboutMe_explain_Photo{
     background: url(../../assets/bgg.png);
     width: 25rem;
     top: 1rem;
     position: fixed;
-    left: calc(50% - 12.5rem);
+    left: calc(50vw - 15rem);
     z-index: 1;
     filter:drop-shadow( -3px 1px 3px #3d3d3d) ;
-    border-radius: 200px;
-    box-shadow: 0 0 10px #3d3d3d,0 0 30px #ffffff ;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px #3d3d3d,0 0 30px #8b8b8b ,0 0 50px #ffffff;
+    border:2rem solid #a7a7a7a6;
+    backdrop-filter:blur(300px);
+    filter: brightness(.9);
+}
+.aboutMe_explain_name{
+    z-index: 10;
+    color: var(--khakestariRoshan);
+    text-shadow: var(--textShadowDark),0 0 20px #000,0 0 40px #000,0 0 50px #000;
+    font-size: 10rem;
+    position: fixed;
+    top: 3rem;
+    left: calc(50% - 16rem);
 }
 .abilities_container{
     position: fixed;
@@ -210,21 +259,21 @@ z-index: 1;
   } 
 
 
-         .fadeOut {
+.fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   }
   @-webkit-keyframes fadeOut {
   0% {opacity: 1;}
-  100% {opacity: 0;}
+  100% {opacity: 0;display: none;}
   }
   @keyframes fadeOut {
   0% {opacity: 1;}
-  100% {opacity: 0;}
+  100% {opacity: 0;display:none;}
   } 
 
 

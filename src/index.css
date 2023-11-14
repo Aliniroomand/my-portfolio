@@ -21,11 +21,13 @@ body {
   --ghermezRoshan:#b40000;
   --abiTire:#002046;
   --abiRoshan:#397eff;
-  --khakestariTire:#374e01;
-  --khakestariRoshan:#808080;
+  --sabzTire:#374e01;
+  --khakestariRoshan:#a8a8a8;
+  --khakestariTire:#181818;
   --zardTire:#857616;
   --zardRoshan:#FFDE2E;
-  --textShadow: 0px 0px 2px #ffffff;
+  --textShadow:0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan);
+  --textShadowDark:0 0 5px #000,0 0 10px #000,0 0 20px #000;
   --boxShadow: 10px 0px 7px 2px #e2e2e0, -10px 0px 8px 0px #7a7770, -5px 0px 6px 0px #e2e2e0 inset, 4px 1px 12px 2px #7a7770 inset;
   --neoShadow1: -3px 3px 10px #000e2488,inset 3px -3px 10px #000e2488,3px -3px 10px #fff,inset -3px 3px 10px #ffffffc5;
 }
