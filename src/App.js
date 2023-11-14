@@ -6,10 +6,12 @@ import mainBG from './assets/officeBG.jpg';
 
 function App() {
   return (
+    <>
     <div className={styles.container}>
       <img className={styles.mainBG} src={mainBG} alt="mainBG" />
       <AboutMe/>
     </div>
+    </>
   );
 }
 

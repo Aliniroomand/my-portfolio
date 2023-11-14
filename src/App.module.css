@@ -1,8 +1,9 @@
 .container{
 width: 100vw;
 height: 100vh;
-/* display: grid;
-align-content: center; */
+overflow: hidden;
+/* background-color: rgba(128, 128, 128, 0.397);
+filter:blur(5px); */
 }
 .mainBG{
     position: fixed;
@@ -11,6 +12,7 @@ align-content: center; */
     z-index: -1;
     left: 50%;
     transform: translate(-50%,0%);
+    
 }
 @media (width<410px){
     .mainBG{
