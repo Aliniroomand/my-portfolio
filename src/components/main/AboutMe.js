@@ -12,6 +12,9 @@ import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
 import stairs from '../../assets/starirs.png'
 
+//components
+import Abilities from '../Abilities';
+
 //style
 import styles from './AboutMe.module.css'
 
@@ -90,18 +93,19 @@ const AboutMe = () => {
                         <li><img src={wordpress} alt='abilities'/></li>
                     </ul>
                 </section>
-                    { actived.abilities &&
-                    <section   className={styles.main_section_visible}>
-                            <button  onClick={closeAll}>sssssssss</button>
+                { actived.abilities &&
+                    <section   className={`${styles.main_section_visible} ${styles.fadeIn}`}>
+                        <Abilities/>
+                        <button className={styles.closeAll_abilities} onClick={closeAll}>برگشت</button>
                     </section>
-                    }
+                }
                 <section onClick={activing} id='projects' className={styles.projects_container}>
                     <h1 id='projects' className={styles.projects_title}>پروژه ها</h1>
                     <img id='projects' src={stairs} className={styles.projects_explain} alt='projects' />
                 </section>
                     { actived.projects &&
                     <section   className={styles.main_section_visible}>
-                            <button onClick={closeAll}>sssssssss</button>
+                        <button onClick={closeAll}>sssssssss</button>
                     </section>
                     }
 

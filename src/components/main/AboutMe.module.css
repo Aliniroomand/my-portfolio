@@ -56,13 +56,13 @@ padding: 20px 0 0 30px;
     text-shadow: var(--textShadow);
     transform: rotate(270deg);
 }
-.closeAll{
+.closeAll,
+.closeAll_abilities{
     position: fixed;
-    top: 5rem;
-    left: 2rem;
+
     width: 17rem;
-    height: 2rem;
-    font-size: 1.8rem;
+    height: 2.5rem;
+    font-size: 2rem;
     font-family: var(--fa1);
     border-radius: 30px;
     background: none;
@@ -70,7 +70,16 @@ padding: 20px 0 0 30px;
     box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan);
     border: none;
 }
-.closeAll:hover{
+.closeAll{
+    top: 5rem;
+    left: 2rem;
+}
+.closeAll_abilities{
+bottom: 5rem;
+left: calc(50% - 8.5rem);
+}
+.closeAll:hover,
+.closeAll_abilities:hover{
     box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan),0 0 60px var(--khakestariRoshan);
     border: 1px solid var(--khakestariRoshan);
     cursor: pointer;
@@ -132,7 +141,6 @@ padding: 20px 0 0 30px;
 }
 .abilities_container{
     position: fixed;
-    top: 0.3rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -178,14 +186,14 @@ filter: drop-shadow(var(--textShadow));
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-position: fixed;
-padding: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-right: calc(50% - 22.5rem);
-top: 11rem;
-z-index: 1;
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: calc(50% - 22.5rem);
+    top: 12rem;
+    z-index: 1;
 }
 .projects_title{
     text-align: right;
@@ -202,6 +210,24 @@ filter: drop-shadow(-2px 0px 3px);
 z-index: 1;
 }
 
+
+/* Media queries */
+@media (width <= 768px ){
+    .siteTitle{
+        left: calc(50% - 8rem);
+        font-size: 1.2rem;
+        top: 0.2rem;
+    }
+    .aboutMe_Photo{
+        width: 10rem;
+        top: 2rem;
+        left:0;
+        height: 20rem;
+        background-position-x: right;
+        
+    }
+
+}
 
 
 
