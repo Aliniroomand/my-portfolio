@@ -224,11 +224,101 @@ z-index: 1;
         left:0;
         height: 20rem;
         background-position-x: right;
-        
+    }
+.aboutMe_title{
+    left: -2.6rem;
+    position: fixed;
+    }
+    .aboutMe_explain_Photo{
+    width:22rem;
+    border:1rem solid #a7a7a7a6;
+    left: calc(50% - 11rem);
+    top:0;
+
+    }
+    .aboutMe_explain_name{
+        font-size: 8rem;
+        left: 12rem;
+    }
+    .aboutMe_explain_container{
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+    }
+    .AboutMe_explain_text {
+        font-size: 2.5rem;
+        font-family: var(--fa1);
+        text-wrap: nowrap;
+
+    }
+    .aboutMe_explain_container ul:first-child{
+        text-align:left;
+        display: flex;
+        align-items: flex-start;
+    
+    }
+    .AboutMe_explain_text li span{
+        color: var(--khakestariRoshan);
+        text-shadow: var(--textShadowDark);
+        font-size: 1.4rem;
+    }
+    .closeAll{
+        top:1rem;
+        left: 3rem;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
     }
 
 }
 
+@media (width <= 425px ){
+    .aboutMe_explain_Photo{
+        width:14rem;
+        border:1rem solid #a7a7a7a6;
+        left: calc(50% - 8rem);
+    }
+    .aboutMe_explain_name{
+        font-size: 5rem;
+        left: 3rem;
+    }
+    .aboutMe_explain_container{
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        top: 10rem;
+        position: fixed;
+    }
+    .AboutMe_explain_text {
+        font-size: 1.8rem;
+        font-family: var(--fa1);
+        text-wrap: nowrap;
+        gap: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .aboutMe_explain_container ul:first-child{
+        text-align:left;
+        display: flex;
+        align-items: flex-start;
+    
+    }
+    .AboutMe_explain_text li span{
+        color: var(--khakestariRoshan);
+        text-shadow: var(--textShadowDark);
+        font-size: 1.4rem;
+    }
+    .closeAll{
+        top:23rem;
+        left: calc(50% - 2.5rem);
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+}
 
 
 
