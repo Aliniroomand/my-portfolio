@@ -13,10 +13,12 @@ import wordpress from '../../assets/wordpress.png'
 import stairs from '../../assets/starirs.png'
 
 //components
-import Abilities from '../Abilities';
+import Abilities from '../../components/main/Abilities';
 
 //style
 import styles from './AboutMe.module.css'
+import { useNavigate } from 'react-router-dom';
+import AnimationForTransition from '../AnimationForTransition';
 
 const AboutMe = () => {
     const[actived,setActived]=useState({
@@ -40,16 +42,27 @@ const AboutMe = () => {
         }
         e.target.parentNode.classList.add(`${styles.fadeOut}`)
     }
+    const navigate = useNavigate();
+    const activing_projects=(e)=>{
+        e.target.parentNode.parentNode.classList.add(`${styles.slideOutRight}`);
+        setTimeout(() => {
+            navigate("projects");
+        }, 1000);
+
+
+    }
+
     return (
         <>
-            <section >
+        <AnimationForTransition>
+            <section className={styles.container} >
             {/*for banner of site  */}
             <header>
                 <TypeAnimation
                     sequence={[
                         'سلام به دنیای کاری من خوش اومدید',
                         2000, 
-                        'سلام به اتاق رزومه من خوش اومدید',
+                        'سلام به اتاق نمونه کارهای من خوش اومدید',
                         2000,
                     ]}
                     wrapper="span"
@@ -82,8 +95,8 @@ const AboutMe = () => {
                     </section>
                 }
                 <section onClick={activing} id='abilities' className={styles.abilities_container}>
-                    <h1 id='abilities' className={styles.abilities_title}>مهارت ها </h1>
-                    <ul id='abilities' className={styles.abilities_explain}>
+                    <h1 onClick={activing} id='abilities' className={styles.abilities_title}>مهارت ها </h1>
+                    <ul onClick={activing} id='abilities' className={styles.abilities_explain}>
                         <li><img src={html} alt='abilities'/></li>
                         <li><img src={css} alt='abilities'/></li>
                         <li><img src={js} alt='abilities'/></li>
@@ -99,18 +112,15 @@ const AboutMe = () => {
                         <button className={styles.closeAll_abilities} onClick={closeAll}>برگشت</button>
                     </section>
                 }
-                <section onClick={activing} id='projects' className={styles.projects_container}>
-                    <h1 id='projects' className={styles.projects_title}>پروژه ها</h1>
-                    <img id='projects' src={stairs} className={styles.projects_explain} alt='projects' />
+                <section onClick={activing_projects} id='projects' className={styles.projects_container}>
+                    <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>پروژه ها</h1>
+                    <img id='projects' onClick={activing_projects} src={stairs} className={styles.projects_explain} alt='projects' />
                 </section>
-                    { actived.projects &&
-                    <section   className={styles.main_section_visible}>
-                        <button onClick={closeAll}>sssssssss</button>
-                    </section>
-                    }
+
 
             </section>
         </section>
+        </AnimationForTransition>
         </>
     );
 };

@@ -1,16 +1,16 @@
 import React from 'react';
 //styles
-import styles from './main/Abilities.module.css'
+import styles from './Abilities.module.css'
 //images
-import html from '../assets/html.png'
-import css from '../assets/css.png'
-import js from '../assets/javascript.png'
-import react from '../assets/react.png'
-import redux from '../assets/redux.png'
-import seo from '../assets/seo.png'
-import wordpress from '../assets/wordpress.png'
+import html from '../../assets/html.png'
+import css from '../../assets/css.png'
+import js from '../../assets/javascript.png'
+import react from '../../assets/react.png'
+import redux from '../../assets/redux.png'
+import seo from '../../assets/seo.png'
+import wordpress from '../../assets/wordpress.png'
 //helper
-import { Number } from '../helper/Helper';
+import { Number } from '../../helper/Helper';
 
 
 const Abilities = () => {
