@@ -10,7 +10,7 @@ import react from '../../assets/react.png'
 import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
-import stairs from '../../assets/starirs.png'
+import stairs from '../../assets/stairs (3).png'
 
 //components
 import Abilities from '../../components/main/Abilities';
@@ -23,7 +23,6 @@ import AnimationForTransition from '../AnimationForTransition';
 const AboutMe = () => {
     const[actived,setActived]=useState({
         aboutMe:false,
-        projects:false,
         abilities:false,
     })
     const activing=(e)=>{
@@ -34,7 +33,6 @@ const AboutMe = () => {
             setTimeout(() => {
                 setActived({
                     aboutMe:false,
-                    projects:false,
                     abilities:false,
                 })    
             }, 1000);
@@ -44,18 +42,20 @@ const AboutMe = () => {
     }
     const navigate = useNavigate();
     const activing_projects=(e)=>{
-        e.target.parentNode.parentNode.classList.add(`${styles.slideOutRight}`);
         setTimeout(() => {
             navigate("projects");
-        }, 1000);
-
-
+        }, 500);
+        const parent = document.getElementById("1")
+        parent.classList.add(`${styles.slideOutRight}`);
+        console.log(parent);
+        
+        
     }
-
+    
     return (
         <>
         <AnimationForTransition>
-            <section className={styles.container} >
+            <section id='1' className={styles.container} >
             {/*for banner of site  */}
             <header>
                 <TypeAnimation
@@ -95,15 +95,15 @@ const AboutMe = () => {
                     </section>
                 }
                 <section onClick={activing} id='abilities' className={styles.abilities_container}>
-                    <h1 onClick={activing} id='abilities' className={styles.abilities_title}>مهارت ها </h1>
-                    <ul onClick={activing} id='abilities' className={styles.abilities_explain}>
-                        <li><img src={html} alt='abilities'/></li>
-                        <li><img src={css} alt='abilities'/></li>
-                        <li><img src={js} alt='abilities'/></li>
-                        <li><img src={react} alt='abilities'/></li>
-                        <li><img src={redux} alt='abilities'/></li>
-                        <li><img src={seo} alt='abilities'/></li>
-                        <li><img src={wordpress} alt='abilities'/></li>
+                    <h1 id='abilities' className={styles.abilities_title}>مهارت ها </h1>
+                    <ul id='abilities' className={styles.abilities_explain}>
+                        <li  ><img id='abilities' src={html} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={css} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={js} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={react} alt='abilities'/></li>
+                        <li  ><img id='abilities'  src={redux} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={seo} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={wordpress} alt='abilities'/></li>
                     </ul>
                 </section>
                 { actived.abilities &&

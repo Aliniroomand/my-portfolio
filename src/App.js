@@ -2,7 +2,7 @@ import { Route , Navigate , Routes , useLocation} from 'react-router-dom';
 
 //component
 import AboutMe from './components/main/AboutMe';
-import Landing_of_projects from './components/projects/Landing_of_projects';
+import LandingOfProjects from './components/projects/LandingOfProjects';
 
 //animation for tansition
 import { AnimatePresence } from "framer-motion";
@@ -12,18 +12,26 @@ import styles from './App.module.css'
 
 //images
 import mainBG from './assets/officeBG.jpg'
+import projectsBG from './assets/backgrounds/projectsBG.jpg'
 function App() {
   const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <>
       <AnimatePresence mode="wait">
         <div className={styles.container}>
           <Routes key={location.pathname} location={location}>
-            <Route path='projects' element={<Landing_of_projects/>}/>
+            <Route path='projects' element={<LandingOfProjects/>}/>
             <Route path='/' element={<AboutMe/>}/>
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
-          <img src={mainBG} alt='mainBG' className={styles.mainBG} />
+          {
+            (location.pathname === "/")?
+          <img id="mainBG"src={mainBG} alt='mainBG' className={`${styles.mainBG}`} />
+          :
+          <img src={projectsBG} alt='projectsBG' className={`${styles.mainBG2} `}/>
+          }
       </div>
       </AnimatePresence>
     </>

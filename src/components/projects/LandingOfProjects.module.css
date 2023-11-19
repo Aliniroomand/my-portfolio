@@ -1,0 +1,35 @@
+.container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    perspective: 500px;
+    overflow: hidden;
+}
+
+.stairs{
+    width: 40rem;
+    height: 50rem;
+    position:fixed;
+    right: calc(50% - 19rem);
+    filter: drop-shadow(-5px 5px 3px #4e4e4e);
+    transform: rotateX(1deg) rotateY(357deg);
+    transform-style: preserve-3d;
+}
+.container{
+  perspective: 100px;
+
+}
+.clock_project{
+position: fixed;
+width: 9rem;
+height: 8rem;
+left: 50%;
+bottom: 3.5rem;
+transform: rotateZ(-10deg);
+filter: drop-shadow(-5px 5px 3px #1a1919);
+}
+.clock_project:hover{
+  filter:contrast(500%) ;
+  transform:scale3d(1.1,1.1,1.1) rotateZ(-10deg);
+  transition:  1s;
+}
