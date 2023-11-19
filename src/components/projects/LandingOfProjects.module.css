@@ -1,16 +1,28 @@
 .container{
+  font-family: var(--fa3);
     position: fixed;
     height: 100vh;
     width: 100vw;
     perspective: 500px;
+ 
+    direction: rtl;
     overflow: hidden;
 }
-
+.container h1{
+  position: fixed;
+  text-align: center;
+  color: var(--ghermezTire);
+  border-radius: 50px;
+  left: calc(10% - 2rem)  ;
+  padding: 20px;
+  box-shadow: 0 0 10px var(--khakestariTire), 0 0 20px var(--khakestariTire),0 0 30px var(--khakestariTire),
+              inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan),inset 0 0 80px var(--khakestariRoshan);
+}
 .stairs{
     width: 40rem;
     height: 50rem;
     position:fixed;
-    right: calc(50% - 19rem);
+    right: calc(50% - 29rem);
     filter: drop-shadow(-5px 5px 3px #4e4e4e);
     transform: rotateX(1deg) rotateY(357deg);
     transform-style: preserve-3d;
@@ -19,17 +31,45 @@
   perspective: 100px;
 
 }
-.clock_project{
+.clock_project a img{
 position: fixed;
 width: 9rem;
 height: 8rem;
-left: 50%;
-bottom: 3.5rem;
+left: calc(50% + 10.1rem);
+bottom: 3.8rem;
 transform: rotateZ(-10deg);
 filter: drop-shadow(-5px 5px 3px #1a1919);
 }
-.clock_project:hover{
-  filter:contrast(500%) ;
+.clock_project h4{
+  left:10rem;
+  top: 16rem;
+opacity: 0;
+transition: opacity 1s;
+padding: 10px;
+color: var(--zardRoshan);
+background-color: var(--abiTire);
+box-shadow: 0 0 10px var(--abiTire), 0 0 20px var(--abiTire),0 0 30px var(--abiTire),
+inset 0 0 10px var(--abiTire),inset 0 0 20px var(--abiRoshan),inset 0 0 50px var(--abiRoshan),inset 0 0 80px var(--abiRoshan);
+
+border-radius: 30px;
+font-size: 2rem;
+text-align: center;
+text-wrap: wrap;
+width: 20rem;
+position: fixed;
+font-family: var(--fa1);
+text-shadow: var(--textShadowDark);
+font-weight: 100;
+}
+.clock_project h4 span{
+  color: var(--abiRoshan);
+}
+.clock_project img:hover{
+  filter:contrast(150%) drop-shadow(-8px 8px 4px #1a1919);
   transform:scale3d(1.1,1.1,1.1) rotateZ(-10deg);
   transition:  1s;
+}
+.clock_project a:hover ~ h4{
+  opacity: 1;
+transition: 1s;
 }

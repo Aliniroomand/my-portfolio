@@ -12,7 +12,8 @@ import styles from './App.module.css'
 
 //images
 import mainBG from './assets/officeBG.jpg'
-import projectsBG from './assets/backgrounds/projectsBG.jpg'
+import projectsBG from './assets/projectsBG.jpg'
+
 function App() {
   const location = useLocation();
   console.log(location.pathname);

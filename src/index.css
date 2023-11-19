@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Jomhuria&family=Lalezar&family=Parisienne&family=Playball&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lateef&family=Jomhuria&family=Lalezar&family=Parisienne&family=Playball&family=Yeseva+One&display=swap');
 
 body {
   box-sizing: border-box;
@@ -11,9 +11,10 @@ body {
   "Lalezar"
   ,"Parisienne"
   ,"Playball"
-  ,'Yeseva';
+  ,'Yeseva',"Lateef";
   --fa1: "Jomhuria";
   --fa2:"Lalezar";
+  --fa3:"Lateef";
   --eng1:"Agbalumo";
   --eng2:"Parisienne";
   --eng3:"Playball";
