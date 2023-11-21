@@ -7,6 +7,8 @@ import styles from './LandingOfProjects.module.css'
 //images
 import stairs from '../../assets/stairs (3).png'
 import watchLogo from "../../assets/projects Logo/clock.png"
+import calculatorLogo from "../../assets/calculator.png"
+
 const Landing_of_projects = () => {
     return (
         <AnimationForTransition>
@@ -25,6 +27,25 @@ const Landing_of_projects = () => {
                         HTML , css , JS <br/>
                         <span>توضیح:</span><br/>
                         پروژه ای ابتدایی برای تمرین مفهوم های JS که توی اون ساعت هم به صورت آنالوگ هم دیجیتال قابل نمایش هست <br/>
+                        <span>سطح :</span>
+                        <br/>مبتدی<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________ clock project______________________ */}
+
+           {/* calculator project______________________ */}
+           <article className={styles.calculator_project}>
+                    <Link target='_blank' to="https://aliniroomand.github.io/calculator-amature/">
+                        <img  src={calculatorLogo} alt="calculator_project_logo"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>ماشین حساب<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>

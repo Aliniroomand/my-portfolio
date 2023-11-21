@@ -1,0 +1,32 @@
+.container{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.container h5{
+    margin: 0;
+}
+.links_container{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.links_container li img{
+    width: 40px;
+    padding-inline: 5px;
+}
+.links_container li img:hover{
+filter: contrast(200%) brightness(200%);
+transition: 0.3s ease-in-out;
+}
+@media (width <= 425px ){
+.links_container li img{
+    width: 30px;
+}
+}
+@media (width <= 375px ){
+    .links_container li img{
+        width: 20px;
+    }
+    }

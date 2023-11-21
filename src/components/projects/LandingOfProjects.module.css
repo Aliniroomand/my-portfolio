@@ -3,8 +3,7 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
-    perspective: 500px;
- 
+    perspective: 100px;
     direction: rtl;
     overflow: hidden;
 }
@@ -27,10 +26,7 @@
     transform: rotateX(1deg) rotateY(357deg);
     transform-style: preserve-3d;
 }
-.container{
-  perspective: 100px;
 
-}
 .clock_project a img{
 position: fixed;
 width: 9rem;
@@ -40,7 +36,17 @@ bottom: 3.8rem;
 transform: rotateZ(-10deg);
 filter: drop-shadow(-5px 5px 3px #1a1919);
 }
-.clock_project h4{
+.calculator_project a img{
+  position: fixed;
+filter: drop-shadow(-5px 5px 3px #1a1919);
+  width: 5rem;
+left:55%;
+bottom: 9rem;
+
+
+}
+.clock_project h4,
+.calculator_project h4{
   left:10rem;
   top: 16rem;
 opacity: 0;
@@ -61,15 +67,18 @@ font-family: var(--fa1);
 text-shadow: var(--textShadowDark);
 font-weight: 100;
 }
-.clock_project h4 span{
+.clock_project h4 span,
+.calculator_project h4 span{
   color: var(--abiRoshan);
 }
-.clock_project img:hover{
+.clock_project img:hover,
+.calculator_project img:hover{
   filter:contrast(150%) drop-shadow(-8px 8px 4px #1a1919);
-  transform:scale3d(1.1,1.1,1.1) rotateZ(-10deg);
+  transform:scale3d(1.1,1.1,1.1);
   transition:  1s;
 }
-.clock_project a:hover ~ h4{
+.clock_project a:hover ~ h4,
+.calculator_project a:hover ~ h4{
   opacity: 1;
 transition: 1s;
 }

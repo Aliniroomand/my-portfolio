@@ -67,23 +67,29 @@ padding: 20px 0 0 30px;
 .closeAll_abilities{
     position: fixed;
 
-    width: 17rem;
-    height: 2.5rem;
     font-size: 2rem;
     font-family: var(--fa1);
-    border-radius: 30px;
     background: none;
     color: var(--khakestariRoshan);
     box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan);
     border: none;
+
+
 }
 .closeAll{
-    top: 5rem;
-    left: 2rem;
+    top: 2rem;
+    left: calc(50% - 20rem); 
+           border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
 }
 .closeAll_abilities{
 bottom: 5rem;
 left: calc(50% - 8.5rem);
+width: 19rem;
+height: 2.5rem;
+border-radius: 50px;
+
 }
 .closeAll:hover,
 .closeAll_abilities:hover{
@@ -278,10 +284,8 @@ z-index: 1;
     }
     .closeAll{
         top:1rem;
-        left: 3rem;
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
+        left: calc(50% - 17rem);
+
     }
 
 }
@@ -348,7 +352,12 @@ z-index: 1;
         }
     .closeAll{
         top:1rem;
-        left: 3rem;
+        left:calc(50% - 14rem);
+
+    }
+    .closeAll_abilities{
+        top:1rem;
+        left: 2rem;
         border-radius: 50%;
         width: 5rem;
         height: 5rem;
@@ -472,7 +481,15 @@ z-index: 1;
             height: 4rem;
             width: 4rem;
         }
-
+        .AboutMe_explain_text{
+            padding: 0;
+            padding-inline: 10px;
+            margin: 0;
+          font-size: 1.4rem;
+        }
+        .AboutMe_explain_text li span{
+            font-size: 1.2rem;
+          }
 }
 
 

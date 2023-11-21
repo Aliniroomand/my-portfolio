@@ -9,6 +9,7 @@ import react from '../../assets/react.png'
 import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
+import git_github from "../../assets/Git logo.png"
 //helper
 import { Number } from '../../helper/Helper';
 
@@ -28,22 +29,22 @@ const Abilities = () => {
             </section>
             <section className={styles.Images_container} >
                 <img src={css} alt='abilities'/>
-                <Number n={97}/>
+                <Number n={95}/>
                 <h3>CSS</h3>
             </section>            
             <section className={styles.Images_container}>
                 <img src={js} alt='abilities'/>
-                <Number n={90}/>
+                <Number n={85}/>
                 <h3>Javascript</h3>
             </section>            
             <section className={styles.Images_container}>
                 <img src={react} alt='abilities'/>
-                <Number n={95}/>
+                <Number n={75}/>
                 <h3>React JS</h3>
             </section>            
             <section className={styles.Images_container}>
                 <img src={redux} alt='abilities'/>
-                <Number n={89}/>
+                <Number n={50}/>
                 <h3>Redux</h3>
             </section>            
             <section className={styles.Images_container}>
@@ -53,9 +54,15 @@ const Abilities = () => {
             </section>            
             <section className={styles.Images_container}>
                 <img src={wordpress} alt='abilities'/>
-                <Number n={100}/>
+                <Number n={95}/>
                 <h3>Wordpress</h3>
-            </section>    
+            </section>  
+            <section className={`${styles.Images_container} ${styles.github_container}`}>
+                <img src={git_github} alt='abilities'/>
+                <Number n={100}/>
+                <h3>Git and Github</h3>
+            </section>
+  
         </section>
         </>
         

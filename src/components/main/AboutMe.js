@@ -10,10 +10,12 @@ import react from '../../assets/react.png'
 import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
+import git_github from "../../assets/Git logo.png"
 import stairs from '../../assets/stairs (3).png'
 
 //components
 import Abilities from '../../components/main/Abilities';
+import SocialMedias from './SocialMedias';
 
 //style
 import styles from './AboutMe.module.css'
@@ -22,7 +24,7 @@ import AnimationForTransition from '../AnimationForTransition';
 
 const AboutMe = () => {
     const[actived,setActived]=useState({
-        aboutMe:false,
+        aboutMe:true,
         abilities:false,
     })
     const activing=(e)=>{
@@ -84,6 +86,7 @@ const AboutMe = () => {
                             <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
                                 <li>تخصص <br/>   <span>برنامه نویس فرانت اند</span></li>
                                 <li>تاریخ تولد<br/> <span>پنجم اسفند 1373</span></li>
+                                <li><SocialMedias/></li>
                             </ul>
                             <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
                                 <li>متولد <br/><span>شیراز،ایران</span></li>
@@ -104,6 +107,7 @@ const AboutMe = () => {
                         <li  ><img id='abilities'  src={redux} alt='abilities'/></li>
                         <li  ><img id='abilities' src={seo} alt='abilities'/></li>
                         <li  ><img id='abilities' src={wordpress} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={git_github} alt='abilities'/></li>
                     </ul>
                 </section>
                 { actived.abilities &&
