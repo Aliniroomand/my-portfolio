@@ -31,22 +31,30 @@
 position: fixed;
 width: 9rem;
 height: 8rem;
-left: calc(50% + 10.1rem);
-bottom: 3.8rem;
-transform: rotateZ(-10deg);
+left: calc(50% + 14rem);
+bottom: 3rem;
+transform: rotateZ(-15deg);
 filter: drop-shadow(-5px 5px 3px #1a1919);
 }
 .calculator_project a img{
   position: fixed;
 filter: drop-shadow(-5px 5px 3px #1a1919);
   width: 5rem;
-left:55%;
-bottom: 9rem;
+left:60%;
+bottom: 8.5rem;
+}
 
+.hangman_project a img{
+  position: fixed;
+  filter: drop-shadow(-5px 5px 3px #1a1919) contrast(150%);
+    width:9rem;
+  left:43rem;
+  bottom: 9rem;
 
 }
 .clock_project h4,
-.calculator_project h4{
+.calculator_project h4,
+.hangman_project h4{
   left:10rem;
   top: 16rem;
 opacity: 0;
@@ -68,17 +76,20 @@ text-shadow: var(--textShadowDark);
 font-weight: 100;
 }
 .clock_project h4 span,
-.calculator_project h4 span{
+.calculator_project h4 span,
+.hangman_project h4 span{
   color: var(--abiRoshan);
 }
 .clock_project img:hover,
-.calculator_project img:hover{
+.calculator_project img:hover,
+.hangman_project img:hover{
   filter:contrast(150%) drop-shadow(-8px 8px 4px #1a1919);
   transform:scale3d(1.1,1.1,1.1);
   transition:  1s;
 }
 .clock_project a:hover ~ h4,
-.calculator_project a:hover ~ h4{
+.calculator_project a:hover ~ h4,
+.hangman_project a:hover ~ h4{
   opacity: 1;
 transition: 1s;
 }

@@ -24,7 +24,7 @@ import AnimationForTransition from '../AnimationForTransition';
 
 const AboutMe = () => {
     const[actived,setActived]=useState({
-        aboutMe:true,
+        aboutMe:false,
         abilities:false,
     })
     const activing=(e)=>{

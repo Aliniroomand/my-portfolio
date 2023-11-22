@@ -7,7 +7,8 @@ import styles from './LandingOfProjects.module.css'
 //images
 import stairs from '../../assets/stairs (3).png'
 import watchLogo from "../../assets/projects Logo/clock.png"
-import calculatorLogo from "../../assets/calculator.png"
+import calculatorLogo from "../../assets/projects Logo/calculator.png"
+import hangmanLogo from "../../assets/projects Logo/HangmanLogo.png"
 
 const Landing_of_projects = () => {
     return (
@@ -51,7 +52,25 @@ const Landing_of_projects = () => {
                     </h4>
 
                 </article>
-            {/*end ______________ clock project______________________ */}
+            {/*end ______________ calculator project______________________ */}
+           {/* hangman game project______________________ */}
+           <article className={styles.hangman_project}>
+                    <Link target='_blank' to="https://aliniroomand.github.io/Hangman-mini_game-amature/">
+                        <img  src={hangmanLogo} alt="hangman_project_logo"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>مین گیم هنگ من<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/>
+                        <span>سطح :</span>
+                        <br/>مبتدی<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________ hangman game project______________________ */}
 
         </div>
 
