@@ -59,7 +59,7 @@ const Abilities = () => {
             </section>  
             <section className={`${styles.Images_container} ${styles.github_container}`}>
                 <img src={git_github} alt='abilities'/>
-                <Number n={100}/>
+                <Number n={90}/>
                 <h3>Git and Github</h3>
             </section>
   

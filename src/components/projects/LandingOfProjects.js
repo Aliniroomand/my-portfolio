@@ -9,6 +9,9 @@ import stairs from '../../assets/stairs (3).png'
 import watchLogo from "../../assets/projects Logo/clock.png"
 import calculatorLogo from "../../assets/projects Logo/calculator.png"
 import hangmanLogo from "../../assets/projects Logo/HangmanLogo.png"
+import todoappLogo from "../../assets/projects Logo/todoappLogo.png"
+import weatherapp from "../../assets/projects Logo/wweather (1).png"
+import digital_currency from "../../assets/projects Logo/digital_currency.png"
 
 const Landing_of_projects = () => {
     return (
@@ -71,6 +74,65 @@ const Landing_of_projects = () => {
 
                 </article>
             {/*end ______________ hangman game project______________________ */}
+
+            {/* todo app project______________________ */}
+           <article className={styles.todoapp_project}>
+                    <Link target='_blank' to="https://aliniroomand.github.io/todo-list-Amature-">
+                        <img  src={todoappLogo} alt="todoappLogo"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>لیست کارها<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل localStorage<br/>
+                        <span>سطح :</span>
+                        <br/>مبتدی<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________ todo app project______________________ */}
+
+            {/*weather app project______________________ */}
+            <article className={styles.weatherapp_project}>
+                    <Link target='_blank' to="https://aliniroomand.github.io/weather-app-amature/">
+                        <img  src={weatherapp} alt="weatherappLogo"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>برنامه هواشناسی<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API<br/>
+                        <span>سطح :</span>
+                        <br/>مبتدی<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________weather app project______________________ */}
+
+            {/*digital currency  project______________________ */}
+            <article className={styles.digital_currency_project}>
+                    <Link target='_blank' to="https://mini-digital-currency-exchanger.vercel.app/">
+                        <img  src={digital_currency} alt="digital_currency"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>مینی صرافی عرض دیجیتال<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API و همچنین فیلتر کردن نتایج بر اساس جستجو<br/>
+                        <span>سطح :</span>
+                        <br/>مبتدی<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________digital currency  project______________________ */}
+
+
 
         </div>
 

@@ -26,35 +26,56 @@
     transform: rotateX(1deg) rotateY(357deg);
     transform-style: preserve-3d;
 }
+.clock_project a img,
+.calculator_project a img,
+.hangman_project a img,
+.todoapp_project a img,
+.weatherapp_project a img,
+.digital_currency_project a img{
 
+  position: fixed;
+  filter: drop-shadow(-5px 5px 3px #1a1919);
+    width:9rem;
+}
 .clock_project a img{
-position: fixed;
-width: 9rem;
 height: 8rem;
 left: calc(50% + 14rem);
 bottom: 3rem;
 transform: rotateZ(-15deg);
-filter: drop-shadow(-5px 5px 3px #1a1919);
 }
 .calculator_project a img{
-  position: fixed;
-filter: drop-shadow(-5px 5px 3px #1a1919);
-  width: 5rem;
-left:60%;
-bottom: 8.5rem;
+  width: 6rem;
+left:calc(50% + 8rem);
+bottom: calc(50% - 11.5rem);
 }
 
 .hangman_project a img{
-  position: fixed;
-  filter: drop-shadow(-5px 5px 3px #1a1919) contrast(150%);
-    width:9rem;
-  left:43rem;
-  bottom: 9rem;
-
+  left:50%;
+  bottom: calc(50% - 11rem) ;
+  width: 7rem;
+}
+.todoapp_project a img{
+  left:calc(50% + 3rem);
+  bottom: 16rem;
+  width: 6rem;
+}
+.weatherapp_project a img{
+  right:calc(50% - 23rem);
+  bottom: 14.5rem;
+  width: 6.5rem;
+}
+.digital_currency_project a img{
+  right:calc(50% - 16rem);
+  bottom: 15rem;
+  width: 6rem;
+  transform: rotateX(30deg);
 }
 .clock_project h4,
 .calculator_project h4,
-.hangman_project h4{
+.hangman_project h4,
+.todoapp_project h4,
+.weatherapp_project h4,
+.digital_currency_project h4{
   left:10rem;
   top: 16rem;
 opacity: 0;
@@ -64,9 +85,8 @@ color: var(--zardRoshan);
 background-color: var(--abiTire);
 box-shadow: 0 0 10px var(--abiTire), 0 0 20px var(--abiTire),0 0 30px var(--abiTire),
 inset 0 0 10px var(--abiTire),inset 0 0 20px var(--abiRoshan),inset 0 0 50px var(--abiRoshan),inset 0 0 80px var(--abiRoshan);
-
 border-radius: 30px;
-font-size: 2rem;
+font-size: 1.9rem;
 text-align: center;
 text-wrap: wrap;
 width: 20rem;
@@ -77,19 +97,28 @@ font-weight: 100;
 }
 .clock_project h4 span,
 .calculator_project h4 span,
-.hangman_project h4 span{
+.hangman_project h4 span,
+.todoapp_project h4 span,
+.weatherapp_project h4 span,
+.digital_currency_project h4 span{
   color: var(--abiRoshan);
 }
 .clock_project img:hover,
 .calculator_project img:hover,
-.hangman_project img:hover{
-  filter:contrast(150%) drop-shadow(-8px 8px 4px #1a1919);
+.hangman_project img:hover,
+.todoapp_project img:hover,
+.weatherapp_project img:hover,
+.digital_currency_project img:hover{
+  filter:contrast(120%) drop-shadow(-8px 8px 4px #1a1919);
   transform:scale3d(1.1,1.1,1.1);
-  transition:  1s;
+  transition:all 1s;
 }
 .clock_project a:hover ~ h4,
 .calculator_project a:hover ~ h4,
-.hangman_project a:hover ~ h4{
+.hangman_project a:hover ~ h4,
+.todoapp_project a:hover ~ h4,
+.weatherapp_project a:hover ~ h4,
+.digital_currency_project a:hover ~ h4{
   opacity: 1;
 transition: 1s;
 }
