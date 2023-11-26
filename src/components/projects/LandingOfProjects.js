@@ -12,17 +12,20 @@ import hangmanLogo from "../../assets/projects Logo/HangmanLogo.png"
 import todoappLogo from "../../assets/projects Logo/todoappLogo.png"
 import weatherapp from "../../assets/projects Logo/wweather (1).png"
 import digital_currency from "../../assets/projects Logo/digital_currency.png"
+import LAB from "../../assets/projects Logo/LAB.png"
+import iranTint from "../../assets/projects Logo/iranTint.png"
 
 const Landing_of_projects = () => {
     return (
         <AnimationForTransition>
         <div className={styles.container}>
+            <Link to="/" className={styles.return_button}><h4>برگشت</h4></Link>
             <h1>بعضی از پروژه ها بسیار مبتدی هستند<br/> ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم<br/> که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... <br/>و پروژه های حرفه ای تر <br/>نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
             <img className={styles.stairs}  src={stairs} alt='stairs'/>
             {/* clock project______________________ */}
                 <article className={styles.clock_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/clock-amature/">
-                        <img  src={watchLogo} alt="clock_project_logo"/>
+                        <img className={styles.bounceInDown} src={watchLogo} alt="clock_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -41,7 +44,7 @@ const Landing_of_projects = () => {
            {/* calculator project______________________ */}
            <article className={styles.calculator_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/calculator-amature/">
-                        <img  src={calculatorLogo} alt="calculator_project_logo"/>
+                        <img className={styles.bounceInDown}  src={calculatorLogo} alt="calculator_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -59,7 +62,7 @@ const Landing_of_projects = () => {
            {/* hangman game project______________________ */}
            <article className={styles.hangman_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/Hangman-mini_game-amature/">
-                        <img  src={hangmanLogo} alt="hangman_project_logo"/>
+                        <img className={styles.bounceInDown}  src={hangmanLogo} alt="hangman_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -78,7 +81,7 @@ const Landing_of_projects = () => {
             {/* todo app project______________________ */}
            <article className={styles.todoapp_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/todo-list-Amature-">
-                        <img  src={todoappLogo} alt="todoappLogo"/>
+                        <img className={styles.bounceInLeft} src={todoappLogo} alt="todoappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -97,7 +100,7 @@ const Landing_of_projects = () => {
             {/*weather app project______________________ */}
             <article className={styles.weatherapp_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/weather-app-amature/">
-                        <img  src={weatherapp} alt="weatherappLogo"/>
+                        <img className={styles.bounceInLeft} src={weatherapp} alt="weatherappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -116,13 +119,13 @@ const Landing_of_projects = () => {
             {/*digital currency  project______________________ */}
             <article className={styles.digital_currency_project}>
                     <Link target='_blank' to="https://mini-digital-currency-exchanger.vercel.app/">
-                        <img  src={digital_currency} alt="digital_currency"/>
+                        <img className={styles.bounceInLeft} src={digital_currency} alt="digital_currency"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>مینی صرافی عرض دیجیتال<br/>
                         <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
+                        HTML , css , JS ,React JS<br/>
                         <span>توضیح:</span><br/>
                         پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API و همچنین فیلتر کردن نتایج بر اساس جستجو<br/>
                         <span>سطح :</span>
@@ -132,6 +135,43 @@ const Landing_of_projects = () => {
                 </article>
             {/*end ______________digital currency  project______________________ */}
 
+            {/*DR-goharnezhad-Lab project______________________ */}
+            <article className={styles.LAB}>
+                    <Link target='_blank' to="https://dr-goharnezhad-lab.vercel.app/">
+                        <img className={styles.bounceInDown} src={LAB} alt="LAB"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>سایت رسمی آزمایشگاه دکتر گهرنژاد<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        HTML , css , JS , React JS <br/>
+                        <span>توضیح:</span><br/>
+                        پروژه ای نیمه حرفه ای به سفارش کلاینت <br/>برای دریافت جواب آزمایش <br/> !!  این سایت به دلیل عدم استفاده بعضی مسیرها در تمام دستگاه ها،<br/>کاملا ریسپانسیو نگردیده <br/>
+                        <span>سطح :</span>
+                        <br/>نیمه حرفه ای<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________DR-goharnezhad-Lab  project______________________ */}
+
+            {/*iranTint project______________________ */}
+            <article className={styles.iranTint}>
+                    <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
+                        <img className={styles.bounceInDown}  src={iranTint} alt="iranTint"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>فروشگاه لوازم دیتیلینگ خودرو<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        Wordpress(Elementor)<br/>
+                        <span>توضیح:</span><br/>
+                        این پروژه نمونه کاری برای طراحی سایت با وردپرس هست ولی <br/>از آنجایی که این کار نمونه اولیه برای ارائه به کلاینت بود اما<br/>به دلیل مشکلاتی که خود کلاینت در محیط کار پیدا کرد <br/>از درخواست خود برای طراحی سایت صرفنظر کرد<br/>و صفحه اصلی سایت طراحی شد و مابقی دست نخورده و sample باقی موند<br/>
+                        <span>سطح :</span>
+                        <br/>حرفه ای برای وردپرس<br/>
+                    </h4>
+
+                </article>
+            {/*end ______________iranTint project______________________ */}
 
 
         </div>
