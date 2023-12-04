@@ -14,7 +14,7 @@ import weatherapp from "../../assets/projects Logo/wweather (1).png"
 import digital_currency from "../../assets/projects Logo/digital_currency.png"
 import LAB from "../../assets/projects Logo/LAB.png"
 import iranTint from "../../assets/projects Logo/iranTint.png"
-
+import beauty_heaven from '../../assets/projects Logo/beauty-heaven.png'
 const Landing_of_projects = () => {
     return (
         <AnimationForTransition>
@@ -172,6 +172,24 @@ const Landing_of_projects = () => {
 
                 </article>
             {/*end ______________iranTint project______________________ */}
+            {/*beauty heaven project______________________ */}
+            <article className={styles.beauty_heaven}>
+                    <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
+                        <img className={styles.bounceInDown}  src={beauty_heaven} alt="beauty_heaven"/>
+                    </Link>
+                    <h4 >
+                        <span>نام پروژه :</span>
+                        <br/>Beauty Heaven<br/>
+                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
+                        React Redux Css <br/>
+                        <span>توضیح:</span><br/>
+                        یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات |وست و مو وزیبایی براساس <br/>خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت<br/>دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده شده<br/>
+                        <span>سطح :</span>
+                        <br/>حرفه ای <br/>
+                    </h4>
+
+                </article>
+            {/*end ______________beauty heaven______________________ */}
 
 
         </div>

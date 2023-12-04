@@ -61,7 +61,8 @@ color: var(--ghermezRoshan);
 .weatherapp_project a img,
 .digital_currency_project a img,
 .LAB a img,
-.iranTint a img{
+.iranTint a img,
+.beauty_heaven a img{
   position: fixed;
   filter: drop-shadow(-5px 5px 3px #1a1919);
     width:9rem;
@@ -113,6 +114,12 @@ bottom: calc(50% - 12.5rem);
   right:calc(50% - 25rem);
   bottom: calc(50% - .7rem);
 }
+.beauty_heaven a img{
+  filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
+  width: 6rem;
+  right:calc(50% - 25rem);
+  bottom: calc(50% + 4rem);
+}
 .clock_project h4,
 .calculator_project h4,
 .hangman_project h4,
@@ -120,7 +127,8 @@ bottom: calc(50% - 12.5rem);
 .weatherapp_project h4,
 .digital_currency_project h4,
 .LAB h4,
-.iranTint h4{
+.iranTint h4,
+.beauty_heaven h4{
   left:10rem;
   top: 16rem;
 opacity: 0;
