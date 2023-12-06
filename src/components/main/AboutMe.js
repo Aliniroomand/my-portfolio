@@ -49,7 +49,6 @@ const AboutMe = () => {
         }, 500);
         const parent = document.getElementById("1")
         parent.classList.add(`${styles.slideOutRight}`);
-        console.log(parent);
         
         
     }

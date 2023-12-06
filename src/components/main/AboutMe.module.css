@@ -38,7 +38,7 @@ overflow: hidden;
     transform: scale(1.1,1.1);
     transition: 0.4s;
     cursor: pointer;
-animation: rubberBand 2s ease infinite;
+animation: rubberBand 2s ease infinite both;
 animation-iteration-count: 1;
 }
 
@@ -73,6 +73,7 @@ padding: 20px 0 0 30px;
     color: var(--khakestariRoshan);
     box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan);
     border: none;
+    transition: 0.5s;
 
 
 }

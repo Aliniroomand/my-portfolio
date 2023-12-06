@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 //animation for tansition
 import AnimationForTransition from '../AnimationForTransition';
 //styles
 import styles from './LandingOfProjects.module.css'
 //images
-import stairs from '../../assets/stairs (3).png'
 import watchLogo from "../../assets/projects Logo/clock.png"
 import calculatorLogo from "../../assets/projects Logo/calculator.png"
 import hangmanLogo from "../../assets/projects Logo/HangmanLogo.png"
@@ -15,17 +14,28 @@ import digital_currency from "../../assets/projects Logo/digital_currency.png"
 import LAB from "../../assets/projects Logo/LAB.png"
 import iranTint from "../../assets/projects Logo/iranTint.png"
 import beauty_heaven from '../../assets/projects Logo/beauty-heaven.png'
+
+
 const Landing_of_projects = () => {
+    const navigate=useNavigate()
+    const goBack = (e)=>{
+        setTimeout(() => {
+            navigate("/");
+        }, 500);
+        const parent = document.getElementById("parentNode")
+        parent.classList.add(`${styles.fadeOut}`);
+        
+    }
+
     return (
         <AnimationForTransition>
-        <div className={styles.container}>
-            <Link to="/" className={styles.return_button}><h4>برگشت</h4></Link>
-            <h1>بعضی از پروژه ها بسیار مبتدی هستند<br/> ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم<br/> که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... <br/>و پروژه های حرفه ای تر <br/>نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
-            <img className={styles.stairs}  src={stairs} alt='stairs'/>
+        <div id="parentNode" className={styles.container}>
+            <Link onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
+            <h1>بعضی از پروژه ها بسیار مبتدی هستند ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... و پروژه های حرفه ای تر نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
             {/* clock project______________________ */}
                 <article className={styles.clock_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/clock-amature/">
-                        <img className={styles.bounceInDown} src={watchLogo} alt="clock_project_logo"/>
+                        <img className={`${styles.bounceInDown}${styles.clock_project}`} src={watchLogo} alt="clock_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -44,7 +54,7 @@ const Landing_of_projects = () => {
            {/* calculator project______________________ */}
            <article className={styles.calculator_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/calculator-amature/">
-                        <img className={styles.bounceInDown}  src={calculatorLogo} alt="calculator_project_logo"/>
+                        <img className={`${styles.bounceInDown}${styles.calculator_project}`} src={calculatorLogo} alt="calculator_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -62,7 +72,7 @@ const Landing_of_projects = () => {
            {/* hangman game project______________________ */}
            <article className={styles.hangman_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/Hangman-mini_game-amature/">
-                        <img className={styles.bounceInDown}  src={hangmanLogo} alt="hangman_project_logo"/>
+                        <img className={`${styles.bounceInDown}${styles.hangman_project}`}  src={hangmanLogo} alt="hangman_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -81,7 +91,7 @@ const Landing_of_projects = () => {
             {/* todo app project______________________ */}
            <article className={styles.todoapp_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/todo-list-Amature-">
-                        <img className={styles.bounceInLeft} src={todoappLogo} alt="todoappLogo"/>
+                        <img className={`${styles.bounceInLeft}${styles.todoapp_project}`} src={todoappLogo} alt="todoappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -100,7 +110,7 @@ const Landing_of_projects = () => {
             {/*weather app project______________________ */}
             <article className={styles.weatherapp_project}>
                     <Link target='_blank' to="https://aliniroomand.github.io/weather-app-amature/">
-                        <img className={styles.bounceInLeft} src={weatherapp} alt="weatherappLogo"/>
+                        <img className={`${styles.bounceInLeft}${styles.weatherapp_project}`} src={weatherapp} alt="weatherappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -119,7 +129,7 @@ const Landing_of_projects = () => {
             {/*digital currency  project______________________ */}
             <article className={styles.digital_currency_project}>
                     <Link target='_blank' to="https://mini-digital-currency-exchanger.vercel.app/">
-                        <img className={styles.bounceInLeft} src={digital_currency} alt="digital_currency"/>
+                        <img className={`${styles.bounceInLeft}${styles.digital_currency_project}`} src={digital_currency} alt="digital_currency"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -138,7 +148,7 @@ const Landing_of_projects = () => {
             {/*DR-goharnezhad-Lab project______________________ */}
             <article className={styles.LAB}>
                     <Link target='_blank' to="https://dr-goharnezhad-lab.vercel.app/">
-                        <img className={styles.bounceInDown} src={LAB} alt="LAB"/>
+                        <img className={`${styles.bounceInLeft}${styles.LAB_project}`} src={LAB} alt="LAB"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -157,7 +167,7 @@ const Landing_of_projects = () => {
             {/*iranTint project______________________ */}
             <article className={styles.iranTint}>
                     <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
-                        <img className={styles.bounceInDown}  src={iranTint} alt="iranTint"/>
+                        <img className={`${styles.bounceInLeft}${styles.iranTint_project}`}  src={iranTint} alt="iranTint"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -175,7 +185,7 @@ const Landing_of_projects = () => {
             {/*beauty heaven project______________________ */}
             <article className={styles.beauty_heaven}>
                     <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
-                        <img className={styles.bounceInDown}  src={beauty_heaven} alt="beauty_heaven"/>
+                        <img className={`${styles.bounceInLeft}${styles.beauty_heaven}`}  src={beauty_heaven} alt="beauty_heaven"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -183,7 +193,7 @@ const Landing_of_projects = () => {
                         <span>زبان و مهارتهای مورد استفاده:</span><br/>
                         React Redux Css <br/>
                         <span>توضیح:</span><br/>
-                        یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات |وست و مو وزیبایی براساس <br/>خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت<br/>دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده شده<br/>
+                        یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات پوست و مو وزیبایی براساس <br/>خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت<br/>دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده شده<br/>
                         <span>سطح :</span>
                         <br/>حرفه ای <br/>
                     </h4>

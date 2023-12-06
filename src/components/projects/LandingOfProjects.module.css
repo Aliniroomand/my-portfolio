@@ -3,9 +3,9 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
-    perspective: 100px;
     direction: rtl;
     overflow: hidden;
+    perspective: 100px;
 }
 .return_button{
   position: fixed;
@@ -15,7 +15,6 @@
   text-decoration: none;
   font-size: 2rem;
   font-family: var(--fa1);
-  /* background: none; */
   color: var(--khakestariRoshan);
   box-shadow: 0 0 10px var(--khakestariTire), 0 0 20px var(--khakestariTire),0 0 30px var(--khakestariTire),
 inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan);
@@ -37,23 +36,18 @@ color: var(--ghermezRoshan);
 .container h1{
   position: fixed;
   text-align: center;
-  color: var(--ghermezTire);
+  font-size: 1.7rem;
+  width: 21%;
+  color: var(--zardRoshan);
   border-radius: 50px;
-  left: calc(10% - 2rem)  ;
+  left: calc(0.5%);
+  top: calc(20%);
   padding: 20px;
+  text-shadow: 0 0 1px #000 ,0 0 5px #000;
   box-shadow: 0 0 10px var(--khakestariTire), 0 0 20px var(--khakestariTire),0 0 30px var(--khakestariTire),
               inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan),inset 0 0 80px var(--khakestariRoshan);
 }
-.stairs{
-    width: 40rem;
-    height: 50rem;
-    position:fixed;
-    right: calc(50% - 29rem);
-    filter: drop-shadow(-5px 5px 3px #4e4e4e);
-    transform: rotateX(1deg) rotateY(357deg);
-    transform-style: preserve-3d;
-    bottom: -10rem;
-}
+
 .clock_project a img,
 .calculator_project a img,
 .hangman_project a img,
@@ -68,57 +62,59 @@ color: var(--ghermezRoshan);
     width:9rem;
 }
 .clock_project a img{
-height: 8rem;
-left: calc(50% + 14rem);
-bottom: 2rem;
-transform: rotateZ(-15deg);
+left: 45%;
+top: 72%;
+transform: rotateX(30deg);
+width: 4rem;
 }
 .calculator_project a img{
-  width: 6rem;
-left:calc(50% + 8rem);
-bottom: calc(50% - 12.5rem);
+  width: 4.5rem;
+  left: 35%;
+  top: 72%;
 }
 
 .hangman_project a img{
-  left:50%;
-  bottom: calc(50% - 11.5rem) ;
-  width: 7rem;
+  width:5rem;
+  left: 26%;
+  top: 72%;
 }
 .todoapp_project a img{
-  left:calc(50% + 3rem);
-  bottom: 15.5rem;
-  width: 6rem;
+  width:4.5rem;
+  left: 63%;
+  top: 72%;
 }
 .weatherapp_project a img{
-  right:calc(50% - 23rem);
-  bottom: 14rem;
-  width: 6.5rem;
+  width:4.5rem;
+  left: 57%;
+  top: 73%;
 }
 .digital_currency_project a img{
-  right:calc(50% - 16rem);
-  bottom: 14.5rem;
-  width: 6rem;
-  transform: rotateX(30deg);
+  width:3.5rem;
+  left: 51.5%;
+  top: 74%;
+  
 }
 .LAB a img{
+  width:3rem;
+  left: 47%;
+  top: 63.5%;
   filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
-  transform: perspective(100px) rotateX(15deg) rotateY(-15deg);
-  width: 5rem;
-  right:calc(50% - 16rem);
-  bottom: calc(50% + .5rem);
+  
 }
 
 .iranTint a img{
+  width:3.5rem;
+  left: 61%;
+  top: 66.5%;
   filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
-  width: 6rem;
-  right:calc(50% - 25rem);
-  bottom: calc(50% - .7rem);
+
 }
 .beauty_heaven a img{
-  filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
-  width: 6rem;
-  right:calc(50% - 25rem);
-  bottom: calc(50% + 4rem);
+  width:3.5rem;
+  left: 31%;
+  top: 59%;
+  filter:drop-shadow(0 -2px 5px rgb(0, 0, 0));
+
 }
 .clock_project h4,
 .calculator_project h4,
@@ -149,7 +145,8 @@ text-shadow: var(--textShadowDark);
 font-weight: 100;
 }
 .LAB h4,
-.iranTint h4{
+.iranTint h4,
+.beauty_heaven h4{
 font-size: 1.7rem;
 color: var(--khakestariTire);
 background-color: var(--zardRoshan);
@@ -158,7 +155,8 @@ inset 0 0 10px var(--zardRoshan),inset 0 0 20px #000,inset 0 0 50px #000,inset 0
 text-shadow:0 0 5px #fff,0 0 10px #000;
 }
 .LAB h4 span,
-.iranTint h4 span{
+.iranTint h4 span,
+.beauty_heaven h4 span{
   color: var(--ghermezTire);
 }
 .iranTint h4{
@@ -415,3 +413,19 @@ transition: 1s;
       transform: translate3d(0, 0, 0);
       }
       }
+      .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: forwards;
+        }
+        @-webkit-keyframes fadeOut {
+        0% {opacity: 1;}
+        100% {opacity: 0;display: none;}
+        }
+        @keyframes fadeOut {
+        0% {opacity: 1;}
+        100% {opacity: 0;display:none;}
+        } 

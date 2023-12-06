@@ -38,15 +38,22 @@ transition: 0.3s;
 }
 .Images_container img{
     filter:  grayscale(1) drop-shadow(0 0 10px var(--zardRoshan));
+    transition: 0.8s;
+
 
 
 }
 .Images_container:hover > img,
-.Images_container:hover > h3{
+.Images_container:hover > h3{    
     filter: drop-shadow(0 0 1px #ffffff);
-    animation: flip 0.8s ease-in-out;
+    animation: flip 0.8s both;
+    color: var(--khakestariTire);
+    transition: 0.8s;
 }
-
+.Images_container:hover > .numbers{
+color: var(--khakestariTire);
+transition: 0.7s;
+}
 .numbers{
     top: 0;
     right: 0;
@@ -57,11 +64,13 @@ transition: 0.3s;
 }
 .Images_container h3{
     color: var(--zardRoshan);
-    text-shadow: 0 0 5px #000,0 0 10px #000,0 0 20px #fff,0 0 50px #fff;
+    text-shadow: 0 0 2px #000,0 0 10px #000,0 0 20px #000000,0 0 50px #fff;
 font-size: 1.5rem;
 font-family: var(--eng3);
 letter-spacing: 3px;
 text-align: center;
+transition: 0.8s;
+
 }
 
 /* media queries */
