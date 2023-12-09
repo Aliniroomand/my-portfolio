@@ -72,7 +72,8 @@ const AboutMe = () => {
                     repeat={Infinity}
                 />
             </header>
-            <section>
+            <section className={styles.main_container}>
+                {/* about me part */}
                 <section onClick={activing} id="aboutMe" className={styles.aboutMe_container}>
                     <img id="aboutMe" className={styles.aboutMe_Photo} src={myPhoto} alt='myphoto'/>
                     <h1 id="aboutMe" className={styles.aboutMe_title}>درباره من</h1>

@@ -174,17 +174,19 @@ const Landing_of_projects = () => {
                         <br/>فروشگاه لوازم دیتیلینگ خودرو<br/>
                         <span>زبان و مهارتهای مورد استفاده:</span><br/>
                         Wordpress(Elementor)<br/>
-                        <span>توضیح:</span><br/>
+                        <article><span>توضیح:</span><br/>
                         این پروژه نمونه کاری برای طراحی سایت با وردپرس هست ولی <br/>از آنجایی که این کار نمونه اولیه برای ارائه به کلاینت بود اما<br/>به دلیل مشکلاتی که خود کلاینت در محیط کار پیدا کرد <br/>از درخواست خود برای طراحی سایت صرفنظر کرد<br/>و صفحه اصلی سایت طراحی شد و مابقی دست نخورده و sample باقی موند<br/>
+                        </article>
                         <span>سطح :</span>
                         <br/>حرفه ای برای وردپرس<br/>
                     </h4>
 
                 </article>
             {/*end ______________iranTint project______________________ */}
+
             {/*beauty heaven project______________________ */}
             <article className={styles.beauty_heaven}>
-                    <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
+                    <Link target='_blank' to="https://beauty-heaven.vercel.app/">
                         <img className={`${styles.bounceInLeft}${styles.beauty_heaven}`}  src={beauty_heaven} alt="beauty_heaven"/>
                     </Link>
                     <h4 >
@@ -192,8 +194,9 @@ const Landing_of_projects = () => {
                         <br/>Beauty Heaven<br/>
                         <span>زبان و مهارتهای مورد استفاده:</span><br/>
                         React Redux Css <br/>
-                        <span>توضیح:</span><br/>
+                        <article><span>توضیح:</span><br/>
                         یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات پوست و مو وزیبایی براساس <br/>خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت<br/>دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده شده<br/>
+                        </article>
                         <span>سطح :</span>
                         <br/>حرفه ای <br/>
                     </h4>

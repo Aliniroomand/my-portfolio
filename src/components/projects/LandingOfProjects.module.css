@@ -5,7 +5,7 @@
     width: 100vw;
     direction: rtl;
     overflow: hidden;
-    perspective: 100px;
+    perspective: 900px;
 }
 .return_button{
   position: fixed;
@@ -17,14 +17,15 @@
   font-family: var(--fa1);
   color: var(--khakestariRoshan);
   box-shadow: 0 0 10px var(--khakestariTire), 0 0 20px var(--khakestariTire),0 0 30px var(--khakestariTire),
-inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan);
+      inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan);
   top: 2rem;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  right: 5%;
+  right: 3.5%;
   color: var(--ghermezTire);
-text-align: center;
+  text-align: center;
+  transition: 0.5s;
 }
 .return_button:hover{
 background: #ffffff;
@@ -36,14 +37,16 @@ color: var(--ghermezRoshan);
 .container h1{
   position: fixed;
   text-align: center;
-  font-size: 1.7rem;
-  width: 21%;
-  color: var(--zardRoshan);
+  font-size: 2rem;
+  width: 30%;
+  height: 40%;
+  color: #000;
   border-radius: 50px;
-  left: calc(0.5%);
-  top: calc(20%);
+  top: 50%;
+  left: 7%;
+  transform: rotateX(45deg) rotateY(6deg) rotateZ(-5deg);
   padding: 20px;
-  text-shadow: 0 0 1px #000 ,0 0 5px #000;
+  text-shadow: 0 0 1px #fff ,0 0 5px #fff;
   box-shadow: 0 0 10px var(--khakestariTire), 0 0 20px var(--khakestariTire),0 0 30px var(--khakestariTire),
               inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan),inset 0 0 50px var(--khakestariRoshan),inset 0 0 80px var(--khakestariRoshan);
 }
@@ -58,62 +61,75 @@ color: var(--ghermezRoshan);
 .iranTint a img,
 .beauty_heaven a img{
   position: fixed;
-  filter: drop-shadow(-5px 5px 3px #1a1919);
-    width:9rem;
+  transition: 0.5s;
 }
+
+
 .clock_project a img{
-left: 45%;
-top: 72%;
-transform: rotateX(30deg);
+left: 41.5%;
+top: 44%;
 width: 4rem;
+filter: drop-shadow(-2px 2px 2px #1a1919)drop-shadow(-2px 2px 2px #000);
+
 }
 .calculator_project a img{
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(-5px 5px 5px #000);
   width: 4.5rem;
-  left: 35%;
-  top: 72%;
+  left: 27%;
+  top: 45%;
+
 }
 
 .hangman_project a img{
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(-5px 5px 5px #000);
   width:5rem;
-  left: 26%;
-  top: 72%;
+  left: 16%;
+  top: 44%;
+
 }
 .todoapp_project a img{
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(-5px 5px 5px #000);
   width:4.5rem;
-  left: 63%;
-  top: 72%;
+  left: 75%;
+  top: 45%;
+
 }
 .weatherapp_project a img{
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(-5px 5px 5px #000);
   width:4.5rem;
-  left: 57%;
-  top: 73%;
+  left: 64%;
+  top: 45%;
+
 }
 .digital_currency_project a img{
-  width:3.5rem;
-  left: 51.5%;
-  top: 74%;
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(-5px 5px 5px #000);
+  width:3.7rem;
+  left: 53%;
+  top: 47%;
+
   
 }
 .LAB a img{
-  width:3rem;
+  filter: drop-shadow(-5px 5px 5px #1a1919)drop-shadow(0px 0px 2px #000);
+  width:3.7rem;
   left: 47%;
-  top: 63.5%;
-  filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
+  top: 36%;
+
   
 }
 
 .iranTint a img{
-  width:3.5rem;
+  width:5rem;
   left: 61%;
-  top: 66.5%;
+  top: 38.5%;
   filter:drop-shadow (0 10px 20px rgba(0, 0, 0, 0.3));
 
 }
 .beauty_heaven a img{
-  width:3.5rem;
+  width:5rem;
   left: 31%;
-  top: 59%;
-  filter:drop-shadow(0 -2px 5px rgb(0, 0, 0));
+  top: 27%;
+  filter:drop-shadow(0 0px 0px rgb(0, 0, 0));
 
 }
 .clock_project h4,
@@ -125,42 +141,48 @@ width: 4rem;
 .LAB h4,
 .iranTint h4,
 .beauty_heaven h4{
-  left:10rem;
-  top: 16rem;
+  background: #00000063;
+  right:15%;
+  top: 45%;
 opacity: 0;
-transition: opacity 1s;
+transition: opacity 0.5s;
 padding: 10px;
 color: var(--zardRoshan);
-background-color: var(--abiTire);
-box-shadow: 0 0 10px var(--abiTire), 0 0 20px var(--abiTire),0 0 30px var(--abiTire),
-inset 0 0 10px var(--abiTire),inset 0 0 20px var(--abiRoshan),inset 0 0 50px var(--abiRoshan),inset 0 0 80px var(--abiRoshan);
 border-radius: 30px;
-font-size: 1.9rem;
+font-size: 1.7rem;
 text-align: center;
 text-wrap: wrap;
-width: 20rem;
+width: 41%;
 position: fixed;
-font-family: var(--fa1);
-text-shadow: var(--textShadowDark);
-font-weight: 100;
+font-family: var(--fa2);
+text-shadow: 0 0 7px #000,0 0 10px #000;
+transform: rotateX(47deg) rotateY(-4deg) rotateZ(5deg);
+line-height: 2.2rem;
+ box-shadow: 0 0 10px var(--khakestariTire),inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan);
+
+
+
 }
 .LAB h4,
 .iranTint h4,
 .beauty_heaven h4{
-font-size: 1.7rem;
-color: var(--khakestariTire);
-background-color: var(--zardRoshan);
-box-shadow: 0 0 10px var(--zardRoshan), 0 0 20px var(--zardRoshan),0 0 30px var(--zardRoshan),
-inset 0 0 10px var(--zardRoshan),inset 0 0 20px #000,inset 0 0 50px #000,inset 0 0 80px var(--zardTire);
-text-shadow:0 0 5px #fff,0 0 10px #000;
+  font-size: 1.7rem;
+  color: var(--zardRoshan);
+  text-shadow: 0 0 0px #000,0 0 5px #000;
+  top: 42%;
+  line-height: 2rem;
+
 }
 .LAB h4 span,
 .iranTint h4 span,
 .beauty_heaven h4 span{
-  color: var(--ghermezTire);
+  color: var(--ghermezRoshan);
+  text-shadow: 0 0 5px #fff;
 }
-.iranTint h4{
-  font-size: 1.45rem;
+.iranTint h4 article,
+.beauty_heaven h4 article{
+  font-size: 1.2rem;
+  text-wrap: nowrap;
 }
 
 .clock_project h4 span,
@@ -178,10 +200,12 @@ text-shadow:0 0 5px #fff,0 0 10px #000;
 .weatherapp_project img:hover,
 .digital_currency_project img:hover,
 .LAB img:hover,
-.iranTint img:hover{
+.iranTint img:hover,
+.beauty_heaven img:hover{
   filter:contrast(120%) drop-shadow(-8px 8px 4px #1a1919);
   transform:scale(1.2);
   transition:all 1s;
+
 }
 .clock_project a:hover ~ h4,
 .calculator_project a:hover ~ h4,
@@ -190,9 +214,123 @@ text-shadow:0 0 5px #fff,0 0 10px #000;
 .weatherapp_project a:hover ~ h4,
 .digital_currency_project a:hover ~ h4,
 .LAB a:hover ~ h4,
-.iranTint a:hover ~h4{
+.iranTint a:hover ~h4,
+.beauty_heaven a:hover ~ h4{
   opacity: 1;
 transition: 1s;
+}
+
+
+
+
+/* MQ */
+@media (width<768px){
+  .beauty_heaven a img{
+    top: 15%;
+    left: 40%;
+transform:scale(0.77) ;
+    
+  }
+.iranTint a img{
+  left: 57%;
+  top: 30%;
+transform:scale(0.77) ;
+
+}
+.LAB a img{
+  left: 26%;
+  top: 26.7%;
+transform:scale(0.77) ;
+
+}
+.todoapp_project a img{
+transform:scale(0.8) ;
+left: 18%;
+top: 32%;
+}
+.digital_currency_project a img{
+  left: 40%;
+  top: 35%;
+  transform: scale(0.85);
+
+}
+.weatherapp_project a img{
+  left: 65%;
+  top: 32%;
+  transform: scale(0.85);
+
+}
+.hangman_project a img{
+left: 15%;
+top: 44%;
+transform: scale(0.85);
+
+}
+.calculator_project a img{
+left:37%;
+top:45%;
+transform: scale(0.85);
+
+}
+.clock_project a img{
+left: 65%;
+top:43%;
+transform: scale(0.8);
+}
+}
+@media (width <= 425px){
+
+  .beauty_heaven a img{
+    top: 15%;
+    left: 38%;
+    
+  }
+.iranTint a img{
+  left: 51%;
+  top: 29%;
+transform:scale(0.57) ;
+
+}
+.LAB a img{
+  left: 26%;
+  top: 26.7%;
+transform:scale(0.57) ;
+
+}
+.todoapp_project a img{
+transform:scale(0.6) ;
+left: 16%;
+top: 32%;
+}
+.digital_currency_project a img{
+  left: 40%;
+  top: 33%;
+  transform: scale(0.65);
+
+}
+.weatherapp_project a img{
+  left: 57%;
+  top: 32%;
+  transform: scale(0.65);
+
+}
+.hangman_project a img{
+left: 12%;
+top: 42%;
+transform: scale(0.7);
+
+}
+.calculator_project a img{
+left:37%;
+top:42%;
+transform: scale(0.7);
+
+}
+.clock_project a img{
+left: 65%;
+top:42%;
+transform: scale(0.7);
+}
 }
 
 

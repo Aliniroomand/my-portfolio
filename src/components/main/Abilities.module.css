@@ -43,14 +43,14 @@ transition: 0.3s;
 
 
 }
-.Images_container:hover > img,
-.Images_container:hover > h3{    
+.Images_container:hover > img{    
     filter: drop-shadow(0 0 1px #ffffff);
     animation: flip 0.8s both;
     color: var(--khakestariTire);
     transition: 0.8s;
 }
-.Images_container:hover > .numbers{
+.Images_container:hover > .numbers,
+    .Images_container:hover > h3{
 color: var(--khakestariTire);
 transition: 0.7s;
 }
@@ -176,6 +176,7 @@ transition: 0.8s;
         text-wrap: nowrap;
     }    
 }
+
     
 
 
