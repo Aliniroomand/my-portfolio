@@ -28,7 +28,7 @@ overflow: hidden;
     top: 3rem;
 }
 
-.aboutMe_container:hover >img,
+.aboutMe_container:hover,
 .projects_container:hover,
 .projects_title:hover,
 .projects_explain:hover,

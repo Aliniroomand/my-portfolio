@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 //images
-import myPhoto from '../../assets/profile photo .png'
+import myPhoto from '../../assets/profile photo.png'
+import myPhoto2 from '../../assets/profile photo 2.png'
 import html from '../../assets/html.png'
 import css from '../../assets/css.png'
 import js from '../../assets/javascript.png'
@@ -80,7 +81,7 @@ const AboutMe = () => {
                 </section>
                 { actived.aboutMe &&
                     <section   className={`${styles.main_section_visible} ${styles.fadeIn} `}>
-                    <img  className={styles.aboutMe_explain_Photo} src={myPhoto} alt='myphoto'/>
+                    <img  className={styles.aboutMe_explain_Photo} src={myPhoto2} alt='myphoto'/>
                         <h1 className={styles.aboutMe_explain_name}>علی نیرومند</h1>
                         <section className={styles.aboutMe_explain_container}>
                             <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
