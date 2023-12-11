@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState , useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 //animation for tansition
 import AnimationForTransition from '../AnimationForTransition';
@@ -14,103 +14,201 @@ import digital_currency from "../../assets/projects Logo/digital_currency.png"
 import LAB from "../../assets/projects Logo/LAB.png"
 import iranTint from "../../assets/projects Logo/iranTint.png"
 import beauty_heaven from '../../assets/projects Logo/beauty-heaven.png'
+import cross from '../../assets/svg/cross.svg'
 
 
 const Landing_of_projects = () => {
+    // for access to the parent node fo styling
+    const [parent, setParent] = useState(null);
+    useEffect(() => {
+        setParent(document.getElementById("parentNode"));
+        }, []);
+    // ______________
+
+    // return btn
     const navigate=useNavigate()
     const goBack = (e)=>{
         setTimeout(() => {
             navigate("/");
         }, 500);
-        const parent = document.getElementById("parentNode")
         parent.classList.add(`${styles.fadeOut}`);
+    }
+    //______________
+
+    // show explains
+    const [active,setActive]= useState({
+        clock:false,
+        calculator:false,
+        hangman:false,
+        todo:false,
+        weather:false,
+
+    })
+    const showExplain = (e)=>{
+        e.preventDefault();
+        setActive({[e.target.id]:true})
+    }
+    const close_explain = (e)=>{
+    setTimeout(() => {
+            setActive({
+                clock:false,
+                calculator:false,
+                hangman:false,
+                todo:false,
+                weather:false,
+
+            })
+    }, 500);
+        e.target.parentNode.classList.add(styles.fadeOut);
         
     }
-
+    // _______
+    
     return (
         <AnimationForTransition>
         <div id="parentNode" className={styles.container}>
-            <Link onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
+            <Link  onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
             <h1>بعضی از پروژه ها بسیار مبتدی هستند ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... و پروژه های حرفه ای تر نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
             {/* clock project______________________ */}
                 <article className={styles.clock_project}>
-                    <Link target='_blank' to="https://aliniroomand.github.io/clock-amature/">
-                        <img className={`${styles.bounceInDown}${styles.clock_project}`} src={watchLogo} alt="clock_project_logo"/>
+                    <Link onClick={showExplain}>
+                        <img id='clock' className={`${styles.bounceInDown}${styles.clock_project}`} src={watchLogo} alt="clock_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>ساعت <br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای ابتدایی برای تمرین مفهوم های JS که توی اون ساعت هم به صورت آنالوگ هم دیجیتال قابل نمایش هست <br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {   (active.clock)
+                    &&
+                    <ul className={styles.amature_explain}>
+                        <li>نام پروژه :</li>
+                        <li>ساعت </li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS </li>
+                        <li>توضیح:</li>
+                        <li>پروژه ای ابتدایی برای تمرین مفهوم های JS که توی اون ساعت هم به صورت آنالوگ هم دیجیتال قابل نمایش هست </li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <Link 
+                            target='_blank' 
+                            to="https://aliniroomand.github.io/clock-amature/" 
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </ul>
+                    }
                 </article>
             {/*end ______________ clock project______________________ */}
 
            {/* calculator project______________________ */}
            <article className={styles.calculator_project}>
-                    <Link target='_blank' to="https://aliniroomand.github.io/calculator-amature/">
-                        <img className={`${styles.bounceInDown}${styles.calculator_project}`} src={calculatorLogo} alt="calculator_project_logo"/>
+                    <Link onClick={showExplain} >
+                        <img id='calculator' className={`${styles.bounceInDown}${styles.calculator_project}`} src={calculatorLogo} alt="calculator_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>ماشین حساب<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {(active.calculator)
+                    &&
+                    <ul className={styles.amature_explain}>
+                        <li>نام پروژه :</li>
+                        <li>ماشین حساب </li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS </li>
+                        <li>توضیح:</li>
+                        <li>پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/></li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <Link 
+                            target='_blank' 
+                            to="https://aliniroomand.github.io/calculator-amature/" 
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </ul>
+                    }
                 </article>
             {/*end ______________ calculator project______________________ */}
+
            {/* hangman game project______________________ */}
            <article className={styles.hangman_project}>
-                    <Link target='_blank' to="https://aliniroomand.github.io/Hangman-mini_game-amature/">
-                        <img className={`${styles.bounceInDown}${styles.hangman_project}`}  src={hangmanLogo} alt="hangman_project_logo"/>
+                    <Link onClick={showExplain} >
+                        <img id='hangman' className={`${styles.bounceInDown}${styles.hangman_project}`}  src={hangmanLogo} alt="hangman_project_logo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
-                        <br/>مین گیم هنگ من<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/>
+                        <br/>مینی گیم هنگ من<br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {(active.hangman)
+                    &&
+                    <ul className={styles.amature_explain}>
+                        <li>نام پروژه :</li>
+                        <li>مینی گیم هنگ من</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS </li>
+                        <li>توضیح:</li>
+                        <li> پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS</li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <Link 
+                            target='_blank' 
+                            to="https://aliniroomand.github.io/Hangman-mini_game-amature/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </ul>
+                    }
                 </article>
             {/*end ______________ hangman game project______________________ */}
 
             {/* todo app project______________________ */}
            <article className={styles.todoapp_project}>
-                    <Link target='_blank' to="https://aliniroomand.github.io/todo-list-Amature-">
-                        <img className={`${styles.bounceInLeft}${styles.todoapp_project}`} src={todoappLogo} alt="todoappLogo"/>
+                    <Link onClick={showExplain}>
+                        <img id='todo' className={`${styles.bounceInLeft}${styles.todoapp_project}`} src={todoappLogo} alt="todoappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>لیست کارها<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل localStorage<br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {(active.todo)
+                    &&
+                    <ul className={styles.amature_explain}>
+                        <li>نام پروژه :</li>
+                        <li>لیست کارها</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS </li>
+                        <li>توضیح:</li>
+                        <li> پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل localStorage</li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <Link 
+                            target='_blank' 
+                            to="https://aliniroomand.github.io/todo-list-Amature-"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </ul>
+                    }
                 </article>
             {/*end ______________ todo app project______________________ */}
 
             {/*weather app project______________________ */}
             <article className={styles.weatherapp_project}>
-                    <Link target='_blank' to="https://aliniroomand.github.io/weather-app-amature/">
-                        <img className={`${styles.bounceInLeft}${styles.weatherapp_project}`} src={weatherapp} alt="weatherappLogo"/>
+                    <Link onClick={showExplain}>
+                        <img id='weather' className={`${styles.bounceInLeft}${styles.weatherapp_project}`} src={weatherapp} alt="weatherappLogo"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
@@ -118,11 +216,32 @@ const Landing_of_projects = () => {
                         <span>زبان و مهارتهای مورد استفاده:</span><br/>
                         HTML , css , JS <br/>
                         <span>توضیح:</span><br/>
-                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API<br/>
+                        
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {(active.weather)
+                    &&
+                    <ul className={styles.amature_explain}>
+                        <li>نام پروژه :</li>
+                        <li>برنامه هواشناسی</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS </li>
+                        <li>توضیح:</li>
+                        <li>
+                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API
+                        </li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <Link 
+                            target='_blank' 
+                            to="https://aliniroomand.github.io/weather-app-amature/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </ul>
+                    }
                 </article>
             {/*end ______________weather app project______________________ */}
 
