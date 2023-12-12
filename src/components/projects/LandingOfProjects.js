@@ -42,6 +42,11 @@ const Landing_of_projects = () => {
         hangman:false,
         todo:false,
         weather:false,
+        currency:false,
+        LAB:false,
+        iranTint:false,
+        beautyHeaven:false
+
 
     })
     const showExplain = (e)=>{
@@ -56,6 +61,11 @@ const Landing_of_projects = () => {
                 hangman:false,
                 todo:false,
                 weather:false,
+                currency:false,
+                LAB:false,
+                iranTint:false,
+                beautyHeaven:false
+
 
             })
     }, 500);
@@ -69,7 +79,7 @@ const Landing_of_projects = () => {
         <div id="parentNode" className={styles.container}>
             <Link  onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
             <h1>بعضی از پروژه ها بسیار مبتدی هستند ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... و پروژه های حرفه ای تر نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
-            {/* clock project______________________ */}
+{/* clock project______________________ */}
                 <article className={styles.clock_project}>
                     <Link onClick={showExplain}>
                         <img id='clock' className={`${styles.bounceInDown}${styles.clock_project}`} src={watchLogo} alt="clock_project_logo"/>
@@ -82,28 +92,32 @@ const Landing_of_projects = () => {
                     </h4>
                     {   (active.clock)
                     &&
-                    <ul className={styles.amature_explain}>
-                        <li>نام پروژه :</li>
-                        <li>ساعت </li>
-                        <li>زبان و مهارتهای مورد استفاده:</li>
-                        <li>HTML , css , JS </li>
-                        <li>توضیح:</li>
-                        <li>پروژه ای ابتدایی برای تمرین مفهوم های JS که توی اون ساعت هم به صورت آنالوگ هم دیجیتال قابل نمایش هست </li>
-                        <li>سطح :</li>
-                        <li>مبتدی</li>
-                        <Link 
-                            target='_blank' 
-                            to="https://aliniroomand.github.io/clock-amature/" 
-                            className={styles.go_to_project}>
-                                بریم پروژه رو ببینیم
-                        </Link> 
-                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
-                    </ul>
+                    <section className={styles.amature_explain}>
+                        <ul >
+                            <li>نام پروژه :</li>
+                            <li>ساعت </li>
+                            <li>زبان و مهارتهای مورد استفاده:</li>
+                            <li>HTML , css , JS </li>
+                            <li>توضیح:</li>
+                            <li>پروژه ای ابتدایی برای تمرین مفهوم های JS که توی اون ساعت هم به صورت آنالوگ هم دیجیتال قابل نمایش هست </li>
+                            <li>سطح :</li>
+                            <li>مبتدی</li>
+                        </ul>
+                        <section>
+                                <Link 
+                                    target='_blank' 
+                                    to="https://aliniroomand.github.io/clock-amature/" 
+                                    className={styles.go_to_project}>
+                                        بریم پروژه رو ببینیم
+                                </Link> 
+                        </section>
+                            <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </section>
                     }
                 </article>
-            {/*end ______________ clock project______________________ */}
+{/*end ______________ clock project______________________ */}
 
-           {/* calculator project______________________ */}
+{/* calculator project______________________ */}
            <article className={styles.calculator_project}>
                     <Link onClick={showExplain} >
                         <img id='calculator' className={`${styles.bounceInDown}${styles.calculator_project}`} src={calculatorLogo} alt="calculator_project_logo"/>
@@ -116,7 +130,8 @@ const Landing_of_projects = () => {
                     </h4>
                     {(active.calculator)
                     &&
-                    <ul className={styles.amature_explain}>
+                    <section className={styles.amature_explain}>
+                    <ul >
                         <li>نام پروژه :</li>
                         <li>ماشین حساب </li>
                         <li>زبان و مهارتهای مورد استفاده:</li>
@@ -125,19 +140,22 @@ const Landing_of_projects = () => {
                         <li>پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS  <br/></li>
                         <li>سطح :</li>
                         <li>مبتدی</li>
+                    </ul>
+                    <section>
                         <Link 
                             target='_blank' 
                             to="https://aliniroomand.github.io/calculator-amature/" 
                             className={styles.go_to_project}>
                                 بریم پروژه رو ببینیم
                         </Link> 
+                        </section>
                         <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
-                    </ul>
+                        </section>
                     }
                 </article>
-            {/*end ______________ calculator project______________________ */}
+{/*end ______________ calculator project______________________ */}
 
-           {/* hangman game project______________________ */}
+{/* hangman game project______________________ */}
            <article className={styles.hangman_project}>
                     <Link onClick={showExplain} >
                         <img id='hangman' className={`${styles.bounceInDown}${styles.hangman_project}`}  src={hangmanLogo} alt="hangman_project_logo"/>
@@ -150,7 +168,9 @@ const Landing_of_projects = () => {
                     </h4>
                     {(active.hangman)
                     &&
-                    <ul className={styles.amature_explain}>
+                    <section className={styles.amature_explain}>
+
+                    <ul >
                         <li>نام پروژه :</li>
                         <li>مینی گیم هنگ من</li>
                         <li>زبان و مهارتهای مورد استفاده:</li>
@@ -159,19 +179,23 @@ const Landing_of_projects = () => {
                         <li> پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS</li>
                         <li>سطح :</li>
                         <li>مبتدی</li>
+                    </ul>
+                    <section>
                         <Link 
                             target='_blank' 
                             to="https://aliniroomand.github.io/Hangman-mini_game-amature/"
                             className={styles.go_to_project}>
                                 بریم پروژه رو ببینیم
                         </Link> 
+                    </section>
                         <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
-                    </ul>
+                    </section>
+
                     }
                 </article>
-            {/*end ______________ hangman game project______________________ */}
+{/*end ______________ hangman game project______________________ */}
 
-            {/* todo app project______________________ */}
+{/* todo app project______________________ */}
            <article className={styles.todoapp_project}>
                     <Link onClick={showExplain}>
                         <img id='todo' className={`${styles.bounceInLeft}${styles.todoapp_project}`} src={todoappLogo} alt="todoappLogo"/>
@@ -184,7 +208,8 @@ const Landing_of_projects = () => {
                     </h4>
                     {(active.todo)
                     &&
-                    <ul className={styles.amature_explain}>
+                    <section className={styles.amature_explain}>
+                    <ul >
                         <li>نام پروژه :</li>
                         <li>لیست کارها</li>
                         <li>زبان و مهارتهای مورد استفاده:</li>
@@ -193,19 +218,22 @@ const Landing_of_projects = () => {
                         <li> پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل localStorage</li>
                         <li>سطح :</li>
                         <li>مبتدی</li>
+                    </ul>
+                    <section>
                         <Link 
                             target='_blank' 
                             to="https://aliniroomand.github.io/todo-list-Amature-"
                             className={styles.go_to_project}>
                                 بریم پروژه رو ببینیم
                         </Link> 
+                    </section>
                         <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
-                    </ul>
+                    </section>
                     }
                 </article>
-            {/*end ______________ todo app project______________________ */}
+{/*end ______________ todo app project______________________ */}
 
-            {/*weather app project______________________ */}
+{/*weather app project______________________ */}
             <article className={styles.weatherapp_project}>
                     <Link onClick={showExplain}>
                         <img id='weather' className={`${styles.bounceInLeft}${styles.weatherapp_project}`} src={weatherapp} alt="weatherappLogo"/>
@@ -213,16 +241,13 @@ const Landing_of_projects = () => {
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>برنامه هواشناسی<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS <br/>
-                        <span>توضیح:</span><br/>
-                        
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
                     {(active.weather)
                     &&
-                    <ul className={styles.amature_explain}>
+                    <section  className={styles.amature_explain}>
+                    <ul>
                         <li>نام پروژه :</li>
                         <li>برنامه هواشناسی</li>
                         <li>زبان و مهارتهای مورد استفاده:</li>
@@ -233,95 +258,181 @@ const Landing_of_projects = () => {
                         </li>
                         <li>سطح :</li>
                         <li>مبتدی</li>
+                    </ul>
+                    <section>
                         <Link 
                             target='_blank' 
                             to="https://aliniroomand.github.io/weather-app-amature/"
                             className={styles.go_to_project}>
                                 بریم پروژه رو ببینیم
                         </Link> 
+                        </section>
                         <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
-                    </ul>
+                    </section>
                     }
                 </article>
-            {/*end ______________weather app project______________________ */}
+{/*end ______________weather app project______________________ */}
 
-            {/*digital currency  project______________________ */}
-            <article className={styles.digital_currency_project}>
-                    <Link target='_blank' to="https://mini-digital-currency-exchanger.vercel.app/">
-                        <img className={`${styles.bounceInLeft}${styles.digital_currency_project}`} src={digital_currency} alt="digital_currency"/>
+{/*digital currency  project______________________ */}
+            <article  className={styles.digital_currency_project}>
+                    <Link onClick={showExplain} >
+                        <img id='currency' className={`${styles.bounceInLeft}${styles.digital_currency_project}`} src={digital_currency} alt="digital_currency"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>مینی صرافی عرض دیجیتال<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS ,React JS<br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای مبتدی برای تمرین<br/> مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API و همچنین فیلتر کردن نتایج بر اساس جستجو<br/>
                         <span>سطح :</span>
                         <br/>مبتدی<br/>
                     </h4>
-
+                    {(active.currency)
+                    &&
+                    <section className={styles.amature_explain}>
+                    <ul >
+                        <li>نام پروژه :</li>
+                        <li>مینی صرافی عرض دیجیتال</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS ,React JS</li>
+                        <li>توضیح:</li>
+                        <li>
+                        پروژه ای مبتدی برای تمرین مفاهیم JS و CSS و همچنین تمرین مواردی مثل استفاده از API و همچنین فیلتر کردن نتایج بر اساس جستجو بوسیله ریکت و هوک ها
+                        </li>
+                        <li>سطح :</li>
+                        <li>مبتدی</li>
+                        <section>
+                        <Link 
+                            target='_blank' 
+                            to="https://mini-digital-currency-exchanger.vercel.app/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                        </section>
+                    </ul>
+                    </section>
+                    }
                 </article>
-            {/*end ______________digital currency  project______________________ */}
+{/*end ______________digital currency  project______________________ */}
 
-            {/*DR-goharnezhad-Lab project______________________ */}
+{/*DR-goharnezhad-Lab project______________________ */}
             <article className={styles.LAB}>
-                    <Link target='_blank' to="https://dr-goharnezhad-lab.vercel.app/">
-                        <img className={`${styles.bounceInLeft}${styles.LAB_project}`} src={LAB} alt="LAB"/>
+                    <Link onClick={showExplain} >
+                        <img id='LAB' className={`${styles.bounceInLeft}${styles.LAB_project}`} src={LAB} alt="LAB"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>سایت رسمی آزمایشگاه دکتر گهرنژاد<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        HTML , css , JS , React JS <br/>
-                        <span>توضیح:</span><br/>
-                        پروژه ای نیمه حرفه ای به سفارش کلاینت <br/>برای دریافت جواب آزمایش <br/> !!  این سایت به دلیل عدم استفاده بعضی مسیرها در تمام دستگاه ها،<br/>کاملا ریسپانسیو نگردیده <br/>
                         <span>سطح :</span>
                         <br/>نیمه حرفه ای<br/>
                     </h4>
-
+                    {(active.LAB)
+                    &&
+                    <section className={styles.midLevel_explain}>
+                    <ul>
+                        <li>نام پروژه :</li>
+                        <li>سایت رسمی دکترگهرنژاد</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML , css , JS ,React JS</li>
+                        <li>توضیح:</li>
+                        <li className={styles.midLevel_explain_details}>
+                        پروژه ای نیمه حرفه ای به سفارش کلاینت برای دریافت جواب آزمایش <br/> !!  این سایت به دلیل عدم استفاده بعضی مسیرها در تمام دستگاه ها،کاملا ریسپانسیو نگردیده !!<br/>
+                        </li>
+                        <li>سطح :</li>
+                        <li>نیمه حرفه ای</li>
+                    </ul>
+                    <section>
+                        <Link 
+                            target='_blank' 
+                            to="https://dr-goharnezhad-lab.vercel.app/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                    </section>
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </section>
+                    }
                 </article>
-            {/*end ______________DR-goharnezhad-Lab  project______________________ */}
+{/*end ______________DR-goharnezhad-Lab  project______________________ */}
 
-            {/*iranTint project______________________ */}
+{/*iranTint project______________________ */}
             <article className={styles.iranTint}>
-                    <Link target='_blank' to="https://dev-irantint.pantheonsite.io/">
-                        <img className={`${styles.bounceInLeft}${styles.iranTint_project}`}  src={iranTint} alt="iranTint"/>
+                    <Link onClick={showExplain}>
+                        <img id='iranTint' className={`${styles.bounceInLeft}${styles.iranTint_project}`}  src={iranTint} alt="iranTint"/>
                     </Link>
                     <h4 >
-                        <span>نام پروژه :</span>
-                        <br/>فروشگاه لوازم دیتیلینگ خودرو<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        Wordpress(Elementor)<br/>
-                        <article><span>توضیح:</span><br/>
-                        این پروژه نمونه کاری برای طراحی سایت با وردپرس هست ولی <br/>از آنجایی که این کار نمونه اولیه برای ارائه به کلاینت بود اما<br/>به دلیل مشکلاتی که خود کلاینت در محیط کار پیدا کرد <br/>از درخواست خود برای طراحی سایت صرفنظر کرد<br/>و صفحه اصلی سایت طراحی شد و مابقی دست نخورده و sample باقی موند<br/>
-                        </article>
+                        <span>نام پروژه :</span><br/>
+                        فروشگاه لوازم دیتیلینگ خودرو<br/>
                         <span>سطح :</span>
                         <br/>حرفه ای برای وردپرس<br/>
                     </h4>
-
+                    {(active.iranTint)
+                    &&
+                    <section className={styles.midLevel_explain}>
+                    <ul >
+                        <li>نام پروژه :</li>
+                        <li>فروشگاه لوازم دیتیلینگ خودرو</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>Wordpress(Elementor)</li>
+                        <li>توضیح:</li>
+                        <li className={styles.midLevel_explain_details}>
+                        این پروژه نمونه کاری برای طراحی سایت با وردپرس هست ولی از آنجایی که این کار نمونه اولیه برای ارائه به کلاینت بود امابه دلیل مشکلاتی که خود کلاینت در محیط کار پیدا کرد از درخواست خود برای طراحی سایت صرفنظر کردو صفحه اصلی سایت طراحی شد و مابقی دست نخورده و sample باقی موند
+                        </li>
+                        <li>سطح :</li>
+                        <li>نیمه حرفه ای</li>
+                    </ul>
+                    <section>
+                        <Link 
+                            target='_blank' 
+                            to="https://dev-irantint.pantheonsite.io/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                    </section>
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                    </section>
+                    }
                 </article>
-            {/*end ______________iranTint project______________________ */}
+{/*end ______________iranTint project______________________ */}
 
-            {/*beauty heaven project______________________ */}
+{/*beauty heaven project______________________ */}
             <article className={styles.beauty_heaven}>
-                    <Link target='_blank' to="https://beauty-heaven.vercel.app/">
-                        <img className={`${styles.bounceInLeft}${styles.beauty_heaven}`}  src={beauty_heaven} alt="beauty_heaven"/>
+                    <Link onClick={showExplain}>
+                        <img id='beautyHeaven' className={`${styles.bounceInLeft}${styles.beauty_heaven}`}  src={beauty_heaven} alt="beauty_heaven"/>
                     </Link>
                     <h4 >
                         <span>نام پروژه :</span>
                         <br/>Beauty Heaven<br/>
-                        <span>زبان و مهارتهای مورد استفاده:</span><br/>
-                        React Redux Css <br/>
-                        <article><span>توضیح:</span><br/>
-                        یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات پوست و مو وزیبایی<br/> براساس خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت<br/>دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده شده<br/>
-                        </article>
                         <span>سطح :</span>
                         <br/>حرفه ای <br/>
                     </h4>
-
+                    {(active.beautyHeaven)
+                    &&
+                    <section className={styles.midLevel_explain}>
+                    <ul >
+                        <li>نام پروژه :</li>
+                        <li>Beauty Heaven</li>
+                        <li>زبان و مهارتهای مورد استفاده:</li>
+                        <li>HTML CSS React Redux </li>
+                        <li>توضیح:</li>
+                        <li className={styles.midLevel_explain_details}>
+                        یک نمونه کار حرفه ای با ایده ای از خودم جهت پیدا کردن خدمات پوست و مو وزیبایی<br/> براساس خدمات،نام ارائه دهنده خدمت و یا آدرس و موقعیت ; دارای خدمات جداگانه برای آقایان و خانمها<br/>در این پروژه مبحث های ادمین پنل،سیستم نوبت دهی و مفاهیم ریداکس استفاده می شود
+                        </li>
+                        <li>سطح :</li>
+                        <li>حرفه ای</li>
+                    </ul>
+                    <section>
+                        <Link 
+                            target='_blank' 
+                            to="https://beauty-heaven.vercel.app/"
+                            className={styles.go_to_project}>
+                                بریم پروژه رو ببینیم
+                        </Link> 
+                    </section>
+                        <img onClick={close_explain} className={styles.close_explain} src={cross} alt='close_btn' />
+                        
+                    </section>
+                    }
                 </article>
-            {/*end ______________beauty heaven______________________ */}
+{/*end ______________beauty heaven______________________ */}
 
 
         </div>
