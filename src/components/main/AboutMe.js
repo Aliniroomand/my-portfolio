@@ -58,12 +58,13 @@ const AboutMe = () => {
         <AnimationForTransition>
             <section id='1' className={styles.container} >
             {/*for banner of site  */}
-            <header>
+            <section className={styles.banner_container}>
+                <h1 className={styles.siteTitle}>Hi Welcome To</h1>
                 <TypeAnimation
                     sequence={[
-                        'سلام به دنیای کاری من خوش اومدید',
+                        'My World',
                         2000, 
-                        'سلام به اتاق نمونه کارهای من خوش اومدید',
+                        'My Portfolio',
                         2000,
                     ]}
                     wrapper="span"
@@ -71,34 +72,34 @@ const AboutMe = () => {
                     className={styles.siteTitle}
                     repeat={Infinity}
                 />
-            </header>
+            </section>
             <section className={styles.main_container}>
                 {/* about me part */}
                 <section onClick={activing} id="aboutMe" className={styles.aboutMe_container}>
                     <img id="aboutMe" className={styles.aboutMe_Photo} src={myPhoto2} alt='myphoto'/>
-                    <h1 id="aboutMe" className={styles.aboutMe_title}>درباره من</h1>
+                    <h1 id="aboutMe" className={styles.aboutMe_title}>About Me</h1>
                 </section>
                 { actived.aboutMe &&
                     <section   className={`${styles.main_section_visible} ${styles.fadeIn} `}>
                     <img  className={styles.aboutMe_explain_Photo} src={myPhoto2} alt='myphoto'/>
-                        <h1 className={styles.aboutMe_explain_name}>علی نیرومند</h1>
+                        <h1 className={styles.aboutMe_explain_name}>Ali <br/>Niroomand</h1>
                         <section className={styles.aboutMe_explain_container}>
                             <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
-                                <li>تخصص <br/>   <span>برنامه نویس فرانت اند</span></li>
-                                <li>تاریخ تولد<br/> <span>پنجم اسفند 1373</span></li>
+                                <li>EXPERTISE<br/>   <span>Frontend Developer</span></li>
+                                <li>Date Of Birth<br/> <span>24 February 1995 </span></li>
                                 <li><SocialMedias/></li>
                             </ul>
                             <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
-                                <li>متولد <br/><span>شیراز،ایران</span></li>
-                                <li>تحصیلات <br/><span>لیسانس برق الکترونیک</span></li>
-                                <li>وجه تمایز <br/><span>خلاقیت </span></li>
+                                <li>BORN IN <br/><span>Shiraz-Iran</span></li>
+                                <li>EDUCATION <br/><span>Bachelor of Electrical Engineering</span></li>
+                                <li>Distinctive Feature <br/><span>Creativity and Enthusiasm<br/>About Learning</span></li>
                             </ul>
                         </section>
-                                <button className={styles.closeAll} onClick={closeAll}>برگشت</button>
+                                <button className={styles.closeAll} onClick={closeAll}>Return</button>
                     </section>
                 }
                 <section onClick={activing} id='abilities' className={styles.abilities_container}>
-                    <h1 id='abilities' className={styles.abilities_title}>مهارت ها </h1>
+                    <h1 id='abilities' className={styles.abilities_title}>Skills </h1>
                     <ul id='abilities' className={styles.abilities_explain}>
                         <li  ><img id='abilities' src={html} alt='abilities'/></li>
                         <li  ><img id='abilities' src={css} alt='abilities'/></li>
@@ -117,7 +118,7 @@ const AboutMe = () => {
                     </section>
                 }
                 <section onClick={activing_projects} id='projects' className={styles.projects_container}>
-                    <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>پروژه ها</h1>
+                    <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>Projects</h1>
                     <img id='projects' onClick={activing_projects} src={stairs} className={styles.projects_explain} alt='projects' />
                 </section>
 

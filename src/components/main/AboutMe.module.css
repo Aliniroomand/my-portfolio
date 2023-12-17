@@ -1,9 +1,26 @@
-
-
-
-
-
-
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
+.banner_container{
+display: flex;
+position: fixed;
+flex-direction: column;
+width: 33%;
+line-height: 1rem;
+}
+.siteTitle{
+    text-align: center;
+    font-size: 2.5rem;
+    text-wrap: wrap;
+    left: 0;
+    color: var(--abiTire);
+    text-shadow: var(--textShadow);
+    font-family: var(--fa2);
+    top: 3rem;
+}
 .main_section_visible{
 backdrop-filter:blur(3px);
 background-color: rgba(0, 0, 0, 0.856);
@@ -12,20 +29,7 @@ width: 100%;
 z-index: 10;
 position: fixed;
 overflow: hidden;
-}
-
-.siteTitle{
-    direction: rtl;
-    text-align: center;
-    font-size: 3rem;
-    text-wrap: wrap;
-    width: 300px;
-    position: fixed;
-    left: calc(50% - 40rem);
-    color: var(--abiTire);
-    text-shadow: var(--textShadow);
-    font-family: var(--fa2);
-    top: 3rem;
+perspective: 300px;
 }
 
 .aboutMe_container:hover,
@@ -123,7 +127,6 @@ border-radius: 50px;
 }
 .aboutMe_explain_container ul:first-child{
     text-align:left;
-
 }
 .AboutMe_explain_text li span{
     color: var(--khakestariRoshan);
@@ -147,10 +150,13 @@ border-radius: 50px;
     z-index: 10;
     color: var(--khakestariRoshan);
     text-shadow: var(--textShadowDark),0 0 20px #000,0 0 40px #000,0 0 50px #000;
-    font-size: 10rem;
+    font-size: 6rem;
+    line-height: 5rem;
     position: fixed;
-    top: 3rem;
-    left: calc(50% - 16rem);
+    bottom: 0;
+    left: calc(50% - 15rem);
+    text-align: center;
+    
 }
 .abilities_container{
     position: fixed;

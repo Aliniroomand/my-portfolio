@@ -11,7 +11,7 @@ import styles from "./SocialMedias.module.css"
 const SocialMedias = () => {
     return (
         <div className={styles.container}>
-            <h5>صفحات اجتماعی من</h5>
+            <h5>Let's Get In Touch With Me:</h5>
             <ul className={styles.links_container}>
                 <li>
                     <Link target='_blank' to="www.linkedin.com/in/ali-niroomand-b5b676246">
