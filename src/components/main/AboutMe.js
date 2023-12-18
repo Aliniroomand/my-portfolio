@@ -11,7 +11,7 @@ import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
 import git_github from "../../assets/Git logo.png"
-import stairs from '../../assets/stairs (3).png'
+import stairs from '../../assets/backgrounds/stairs.jpg'
 
 //components
 import Abilities from '../../components/main/Abilities';
@@ -57,28 +57,54 @@ const AboutMe = () => {
         <>
         <AnimationForTransition>
             <section id='1' className={styles.container} >
-            {/*for banner of site  */}
+{/*for banner of site  */}
             <section className={styles.banner_container}>
-                <h1 className={styles.siteTitle}>Hi Welcome To</h1>
+                <h1 className={styles.siteTitle}>Hi Welcome To My</h1>
                 <TypeAnimation
                     sequence={[
-                        'My World',
+                        'World',
                         2000, 
-                        'My Portfolio',
+                        'Portfolio',
                         2000,
                     ]}
-                    wrapper="span"
+                    wrapper="h1"
                     speed={50}
                     className={styles.siteTitle}
                     repeat={Infinity}
                 />
             </section>
+{/* end of banner ________ */}
+{/* container of Infos  */}
             <section className={styles.main_container}>
-                {/* about me part */}
+    {/* about me part */}
                 <section onClick={activing} id="aboutMe" className={styles.aboutMe_container}>
                     <img id="aboutMe" className={styles.aboutMe_Photo} src={myPhoto2} alt='myphoto'/>
                     <h1 id="aboutMe" className={styles.aboutMe_title}>About Me</h1>
                 </section>
+    {/*__________end of about me part */}
+    {/* skills part */}
+                <section onClick={activing} id='abilities' className={styles.abilities_container}>
+                    <h1 id='abilities' className={styles.abilities_title}>Skills </h1>
+                    <ul id='abilities' className={styles.abilities_explain}>
+                        <li  ><img id='abilities' src={html} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={css} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={js} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={react} alt='abilities'/></li>
+                        <li  ><img id='abilities'  src={redux} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={seo} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={wordpress} alt='abilities'/></li>
+                        <li  ><img id='abilities' src={git_github} alt='abilities'/></li>
+                    </ul>
+                </section>
+    {/*________end of skills part */}
+    {/* projects part */}
+                <section onClick={activing_projects} id='projects' className={styles.projects_container}>
+                    <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>Projects</h1>
+                    <img id='projects' onClick={activing_projects} src={stairs} className={styles.projects_explain} alt='projects' />
+                </section>
+    {/*______end of projects part */}
+{/* Explains part */}
+            <section className={styles.explain_container}>
                 { actived.aboutMe &&
                     <section   className={`${styles.main_section_visible} ${styles.fadeIn} `}>
                     <img  className={styles.aboutMe_explain_Photo} src={myPhoto2} alt='myphoto'/>
@@ -98,32 +124,16 @@ const AboutMe = () => {
                                 <button className={styles.closeAll} onClick={closeAll}>Return</button>
                     </section>
                 }
-                <section onClick={activing} id='abilities' className={styles.abilities_container}>
-                    <h1 id='abilities' className={styles.abilities_title}>Skills </h1>
-                    <ul id='abilities' className={styles.abilities_explain}>
-                        <li  ><img id='abilities' src={html} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={css} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={js} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={react} alt='abilities'/></li>
-                        <li  ><img id='abilities'  src={redux} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={seo} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={wordpress} alt='abilities'/></li>
-                        <li  ><img id='abilities' src={git_github} alt='abilities'/></li>
-                    </ul>
-                </section>
                 { actived.abilities &&
                     <section   className={`${styles.main_section_visible} ${styles.fadeIn}`}>
                         <Abilities/>
                         <button className={styles.closeAll_abilities} onClick={closeAll}>برگشت</button>
                     </section>
                 }
-                <section onClick={activing_projects} id='projects' className={styles.projects_container}>
-                    <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>Projects</h1>
-                    <img id='projects' onClick={activing_projects} src={stairs} className={styles.projects_explain} alt='projects' />
-                </section>
-
-
             </section>
+    {/*______ end of explain parts__________ */}
+            </section>
+{/*________end of container of Infos_______  */}
         </section>
         </AnimationForTransition>
         </>

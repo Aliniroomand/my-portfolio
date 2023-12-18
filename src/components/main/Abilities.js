@@ -10,15 +10,16 @@ import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
 import git_github from "../../assets/Git logo.png"
+import Bootstrap from "../../assets/Bootstrap_logo.png"
 //helper
 import { Number } from '../../helper/Helper';
 
 
 const Abilities = () => {
     return (
-        <>
+    <section className={styles.container}>
             <h1 className={styles.title_container}>
-                لیست مهارتهای من تا امروز
+            I have gained expertise in these fields <u>until now</u> ...
             </h1>
         <section className={styles.main_boxes_container}>
             <section className={styles.Images_container}>
@@ -62,9 +63,13 @@ const Abilities = () => {
                 <Number n={90}/>
                 <h3>Git and Github</h3>
             </section>
-  
+            <section className={`${styles.Images_container} ${styles.github_container}`}>
+                <img src={Bootstrap} alt='Bootstrap'/>
+                <h4>Coming Soon ... </h4>
+                <h3>Bootstrap</h3>
+            </section>
         </section>
-        </>
+    </section>
         
         );
 };

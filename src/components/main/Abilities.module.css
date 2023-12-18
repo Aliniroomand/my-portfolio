@@ -1,17 +1,24 @@
-.title_container{
-    color: var(--zardRoshan);
-    font-size: 5rem;
-    font-family: var(--fa1);
-    position: fixed;
-    left: calc(50% - 18rem);
-    text-shadow: 0 0 5px #000,0 0 10px var(--zardRoshan),0 0 20px var(--zardRoshan),0 0 50px var(--zardRoshan);
+.container{
+    display: flex;
+    flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
+
+}
+.title_container{
+    color: var(--khakestariTire);
+    font-size: 3rem;
+    font-family: var(--eng1);
+    text-shadow: 0 0 5px #fff,0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan),0 0 50px var(--khakestariRoshan);
+    margin: 0;
 }
 
 .main_boxes_container{
     width: 100vw;
+    top: 0;
+    position: absolute;
     height: 100vh;
-    position: fixed;
 display: flex;
 gap: 1rem;
 justify-content: space-evenly;
@@ -31,40 +38,49 @@ box-shadow:inset 0 4px 5px #9eefffa4,inset 0 -4px 5px #9eefffaf, 0 0 10px var(--
 background: #ffffff0e;
 }
 .Images_container:hover{
-    background: var(--khakestariRoshan);
-box-shadow: 0 0 20px 10px var(--khakestariRoshan), 0 0 20px 5px var(--khakestariTire),inset 0 0 20px 5px var(--khakestariTire);
-transition: 0.3s;
+    box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan),0 0 60px var(--khakestariRoshan);
+    background:var(--khakestariRoshan);
+    transition: all 0.4s;
+    transform: scale(1.05);
+    
 
 }
 .Images_container img{
-    filter:  grayscale(1) drop-shadow(0 0 10px var(--zardRoshan));
+    filter:  grayscale(1) drop-shadow(0 0 10px var(--khakestariRoshan));
     transition: 0.8s;
 
 
 
 }
 .Images_container:hover > img{    
-    filter: drop-shadow(0 0 1px #ffffff);
+    filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 5px #000);
     animation: flip 0.8s both;
     color: var(--khakestariTire);
     transition: 0.8s;
 }
 .Images_container:hover > .numbers,
-    .Images_container:hover > h3{
+.Images_container:hover > h3{
 color: var(--khakestariTire);
-transition: 0.7s;
+transition: 0.3s;
+text-shadow: 0 0 8px #000,0 0 20px #fff;
+
+}
+.Images_container h4{
+    color: var(--khakestariTire);
+    text-shadow: 0 0 5px #fff;
+
 }
 .numbers{
     top: 0;
     right: 0;
-    color: var(--zardRoshan);
-    text-shadow: 0 0 5px #000,0 0 10px var(--zardRoshan),0 0 20px var(--zardRoshan),0 0 50px var(--zardRoshan);
+    color: var(--khakestariTire);
+    text-shadow: 0 0 5px #fff;
     font-size: 2rem;
     z-index: 20;
 }
 .Images_container h3{
-    color: var(--zardRoshan);
-    text-shadow: 0 0 2px #000,0 0 10px #000,0 0 20px #000000,0 0 50px #fff;
+    color: var(--khakestariTire);
+    text-shadow: 0 0 2px #fff;
 font-size: 1.5rem;
 font-family: var(--eng3);
 letter-spacing: 3px;
