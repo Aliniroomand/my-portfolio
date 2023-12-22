@@ -5,8 +5,23 @@ import github from '../../assets/github Logo.png'
 import Linkedin from "../../assets/linkedin Logo.png"
 import whatsapp from "../../assets/whatsApp logo.png"
 import instagram from "../../assets/insta Logo.png"
+import gmail from "../../assets/Gmail_logo.svg"
 // styles
 import styles from "./SocialMedias.module.css"
+
+
+// This part Is for sending Mail
+const MailtoLink = ({ email, subject, body, children }) => {
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+    return (
+      <Link to={mailtoUrl}>{children}</Link>
+    );
+  };
+  
+// ______________________
+
+
 
 const SocialMedias = () => {
     return (
@@ -32,6 +47,11 @@ const SocialMedias = () => {
                     <Link target='_blank' to="https://wa.me/qr/MJKIWMVVAHCAI1">
                         <img src={whatsapp} alt="LinkedinLogo"/>
                     </Link>
+                </li>
+                <li>
+                <MailtoLink email="aliniroomand31@gmail.com" subject="Contact with portfolio" >
+                   <img src={gmail} alt='gmail' />
+                </MailtoLink>
                 </li>
             </ul>
         </div>

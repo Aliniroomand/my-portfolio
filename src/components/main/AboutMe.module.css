@@ -208,22 +208,37 @@ border-radius: 50px;
     align-items: center;
     justify-content: space-between;
 }
-.AboutMe_explain_text{
-    list-style-type: none;
+.AboutMe_explain_text_right{
+    font-size: 2.7rem;
     font-family: var(--fa1);
-    text-align: right;
+    right: 0;
+    left: 66%;
+    direction: rtl;
+}
+.AboutMe_explain_text_left{
+direction:ltr;
+font-size: 2.7rem;
+font-family: var(--fa1);
+left: 0;
+}
+.AboutMe_explain_text_right,
+.AboutMe_explain_text_left{
+    top: 0;
+    list-style-type: none;
+    position: absolute;
+    font-family: var(--fa1);
     text-shadow: var(--textShadow);
     font-size: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 8rem;
+    justify-content: space-evenly;
     padding-inline: 2rem;
+    height: 100%;
+    margin-top:5rem;
 }
-.aboutMe_explain_container ul:first-child{
-    text-align:left;
-}
-.AboutMe_explain_text li span{
+
+.AboutMe_explain_text_right li span,
+    .AboutMe_explain_text_left li span{
     color: var(--khakestariRoshan);
     text-shadow: var(--textShadowDark);
 }
@@ -231,13 +246,13 @@ border-radius: 50px;
     background: url(../../assets/bgg.png);
     width: 25rem;
     top: 1rem;
-    position: fixed;
+    position: absolute;
     left: calc(50vw - 15rem);
     z-index: 1;
     filter:drop-shadow( -3px 1px 3px #3d3d3d) ;
     border-radius: 20rem;
-    box-shadow: 0 0 10px #3d3d3d,0 0 30px #8b8b8b ,0 0 50px #ffffff;
-    border:2rem solid #a7a7a7a6;
+    box-shadow: inset 0 0 50px #a7a7a7a7,inset 0 0 20px #a7a7a7a7,
+    0 0 50px #a7a7a7,0 0 10px #a7a7a7,0 0 30px #a7a7a7;
     backdrop-filter:blur(300px);
     filter: brightness(.9);
 }
@@ -265,52 +280,50 @@ border-radius: 50px;
         width: 40%;
     }
     .siteTitle{
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
     .main_container{
         width: 60%;
     }
-
-
+    
+    
+    .main_section_visible{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
     .aboutMe_explain_Photo{
-    width:22rem;
-    border:1rem solid #a7a7a7a6;
-    left: calc(50% - 11rem);
+    width: max(40%,20rem);
+    border:1px solid #a7a7a7;
+    
     top:0;
-
+    right: 0;
+    z-index: 0;
+    position: static;
     }
     .aboutMe_explain_name{
-        font-size: 9rem;
-        left: 18rem;
-    }
-    .aboutMe_explain_container{
-        width: 100vw;
-        padding: 0;
-        margin: 0;
+        font-size: 5rem;
+        right:0;
+        left: 59%;
+        z-index: 0;
         position: fixed;
-    }
-    .AboutMe_explain_text {
-        font-size: 2.7rem;
-        font-family: var(--fa1);
-        text-wrap: nowrap;
+        width: 40%;
 
     }
-    .aboutMe_explain_container ul:first-child{
-        text-align:left;
-        display: flex;
-        align-items: flex-start;
-    
+    .AboutMe_explain_text_right,
+.AboutMe_explain_text_left{
+    position: static;
+    width: 25%;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+    .AboutMe_explain_text_right li span,
+    .AboutMe_explain_text_left li span{
+        font-size: 2rem;
     }
-    .AboutMe_explain_text li span{
-        color: var(--khakestariRoshan);
-        text-shadow: var(--textShadowDark);
-        font-size: 1.8rem;
-    }
-
     .closeAll{
-        top:1rem;
-        left: calc(50% - 17rem);
-
+        top: 0.5em;
+        left: calc(25% + 1.5rem);
     }
 
 }
@@ -345,10 +358,27 @@ border-radius: 50px;
         width: 5rem;
         height: 5rem;
     }
+    .aboutMe_explain_Photo,
+    .aboutMe_explain_name{
+        width: 49%;
+        left: 49%;
+        font-size: 4rem;
+    }
+    .AboutMe_explain_text_right,
+    .AboutMe_explain_text_left{
+        width: 20%;
+        line-height: 2rem;
+        font-size: 2rem;
+        margin-top: 2rem;
 
+    }
+    .closeAll{
+        width: 4rem;
+        height: 4rem;
+    }
 }
 
-@media (width <= 430px ){
+@media (width <= 620px ){
     .siteTitle{
         font-size: 1.5rem;
     }
@@ -387,30 +417,28 @@ border-radius: 50px;
 .projects_container{
     width: 48%;
 }
-
+.main_section_visible{
+    justify-content: space-evenly;
+    gap: 5%;
+}
     .aboutMe_explain_Photo{
-        width:14rem;
-        border:1rem solid #a7a7a7a6;
-        left: calc(50% - 8rem);
+        width:25rem;
+        left: calc(50% - 12.5rem);
+        position: fixed;
+        height: 100%;
+        z-index: 0;
     }
     .aboutMe_explain_name{
-        font-size: 5rem;
-        left: 3rem;
+    display: none;
     }
-    .aboutMe_explain_container{
-        width: 100vw;
-        padding: 0;
-        margin: 0;
-        top: 10rem;
-        position: fixed;
-    }
-    .AboutMe_explain_text {
-        font-size: 1.8rem;
+
+    .AboutMe_explain_text_right,
+    .AboutMe_explain_text_left {
+        font-size: 2.5rem;
         font-family: var(--fa1);
-        text-wrap: nowrap;
-        gap: 0;
-        display: flex;
-        justify-content: space-between;
+        width: 48%;
+        z-index: 10;
+        margin-top: 0;
     }
     .aboutMe_explain_container ul:first-child{
         text-align:left;
@@ -429,10 +457,21 @@ border-radius: 50px;
         border-radius: 50%;
         width: 5rem;
         height: 5rem;
+        background: var(--khakestariRoshan);
+        color: var(--khakestariTire);
+    }
+    .closeAll:hover{
+        background: var(--khakestariTire);
+        color: var(--khakestariRoshan);
+    transform: scale(0.9,0.9);
+    box-shadow: 0 0 5px #000,0 0 10px #000,inset 0 0 20px #000,0 0 60px #000;
+
+
+
     }
 
 }
-@media (width <= 375px ){
+@media (width <= 425px ){
     .main_container{
         width: 100%;
         margin-inline: 0;
@@ -456,14 +495,28 @@ border-radius: 50px;
     width:50%;
 
     }
-    .AboutMe_explain_text{
-        padding: 0;
-        padding-inline: 10px;
+    .AboutMe_explain_text_right,
+    .AboutMe_explain_text_left {
+        width: 50%;
+        gap: 0;
+        z-index: 10;
+        padding: 10px;
+        text-shadow:
+         0 0 10px #fff,
+         0 0 20px #fff,
+         0 0 30px #fff,
+         0 0 40px #fff,
+         0 0 50px #fff;
         margin: 0;
-        font-size: 1.4rem;
     }
-    .AboutMe_explain_text li span{
-        font-size: 1.2rem;
+    .AboutMe_explain_text_right li span,
+    .AboutMe_explain_text_left li span {
+        text-shadow:
+         0 0 10px var(--khakestariTire),
+         0 0 20px var(--khakestariTire),
+         0 0 30px var(--khakestariTire),
+         0 0 40px var(--khakestariTire);
+         color: var(--zardRoshan);
         }
 }
 

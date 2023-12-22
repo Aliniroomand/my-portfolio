@@ -109,18 +109,17 @@ const AboutMe = () => {
                     <section   className={`${styles.main_section_visible} ${styles.fadeIn} `}>
                     <img  className={styles.aboutMe_explain_Photo} src={myPhoto2} alt='myphoto'/>
                         <h1 className={styles.aboutMe_explain_name}>Ali <br/>Niroomand</h1>
-                        <section className={styles.aboutMe_explain_container}>
-                            <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
+                            <ul className={`${styles.AboutMe_explain_text_left} ${styles.fadeIn}`}>
                                 <li>EXPERTISE<br/>   <span>Frontend Developer</span></li>
-                                <li>Date Of Birth<br/> <span>24 February 1995 </span></li>
+                                <li>Distinctive Feature <br/><span>Creativity and Enthusiasm<br/>About Learning</span></li>
                                 <li><SocialMedias/></li>
                             </ul>
-                            <ul className={`${styles.AboutMe_explain_text} ${styles.fadeIn}`}>
+                            <ul className={`${styles.AboutMe_explain_text_right} ${styles.fadeIn}`}>
                                 <li>BORN IN <br/><span>Shiraz-Iran</span></li>
                                 <li>EDUCATION <br/><span>Bachelor of Electrical Engineering</span></li>
-                                <li>Distinctive Feature <br/><span>Creativity and Enthusiasm<br/>About Learning</span></li>
+                                <li>Date Of Birth<br/> <span>24 February 1995 </span></li>
+
                             </ul>
-                        </section>
                                 <button className={styles.closeAll} onClick={closeAll}>Return</button>
                     </section>
                 }
