@@ -53,7 +53,7 @@ left: 0;
     text-shadow: var(--textShadow);
     margin-inline: 15px;
 }
-/* ___________ */
+
 
 .abilities_container{
 display: grid;
@@ -97,7 +97,7 @@ filter: drop-shadow(var(--textShadow));
 border-radius: 50%;
 
 }
-/* _______________ */
+
 
 .projects_container{
     box-shadow: 0 0px 5px #363636a4, 0 0px 10px #363636a4, 0 0 30px var(--khakestariRoshan);
@@ -137,7 +137,9 @@ opacity: 0.5;
     transform: scale(1.3);
     transition: 0.4s;
 }
-/* ___________________ */
+/* _________end of main pge elments */
+/* explains part   */
+    /* About me Explains */
 .explain_container{
 position: fixed;
 top: 0;
@@ -162,8 +164,7 @@ perspective: 300px;
 animation: rubberBand 2s ease both;
 animation-iteration-count: 1;
 }
-.closeAll,
-.closeAll_abilities{
+.closeAll{
     position: fixed;
 
     font-size: 2rem;
@@ -177,22 +178,14 @@ animation-iteration-count: 1;
 
 }
 .closeAll{
-    top: 2rem;
     left: calc(50% - 20rem); 
            border-radius: 50%;
     width: 5rem;
     height: 5rem;
+    top: 1rem;
 }
-.closeAll_abilities{
-bottom: 5rem;
-left: calc(50% - 8.5rem);
-width: 19rem;
-height: 2.5rem;
-border-radius: 50px;
 
-}
-.closeAll:hover,
-.closeAll_abilities:hover{
+.closeAll:hover{
     box-shadow: 0 0 5px var(--khakestariRoshan),0 0 10px var(--khakestariRoshan),0 0 20px var(--khakestariRoshan),0 0 60px var(--khakestariRoshan);
     cursor: pointer;
     transform: scale(1.1,1.1);
@@ -231,10 +224,10 @@ left: 0;
     font-size: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 5rem;
     padding-inline: 2rem;
     height: 100%;
-    margin-top:5rem;
 }
 
 .AboutMe_explain_text_right li span,
@@ -285,7 +278,7 @@ left: 0;
     .main_container{
         width: 60%;
     }
-    
+
     
     .main_section_visible{
         display: flex;
@@ -315,15 +308,20 @@ left: 0;
     position: static;
     width: 25%;
     line-height: 2rem;
-    margin-top: 1rem;
+        margin: 10px 0 0 ;
+        text-align: center;
+
+
 }
     .AboutMe_explain_text_right li span,
     .AboutMe_explain_text_left li span{
         font-size: 2rem;
+
     }
     .closeAll{
-        top: 0.5em;
+        bottom: 0;
         left: calc(25% + 1.5rem);
+        top: auto;
     }
 
 }
@@ -351,13 +349,7 @@ left: 0;
         left:calc(50% - 14rem);
 
     }
-    .closeAll_abilities{
-        top:1rem;
-        left: 2rem;
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
-    }
+
     .aboutMe_explain_Photo,
     .aboutMe_explain_name{
         width: 49%;
@@ -369,12 +361,17 @@ left: 0;
         width: 20%;
         line-height: 2rem;
         font-size: 2rem;
-        margin-top: 2rem;
+        margin: 0;
+
 
     }
     .closeAll{
         width: 4rem;
         height: 4rem;
+        top: inherit;
+        right: 20%;
+        left: auto;
+        background:var(--khakestariTire);
     }
 }
 
@@ -418,7 +415,8 @@ left: 0;
     width: 48%;
 }
 .main_section_visible{
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    flex-direction: row;
     gap: 5%;
 }
     .aboutMe_explain_Photo{
@@ -439,26 +437,29 @@ left: 0;
         width: 48%;
         z-index: 10;
         margin-top: 0;
+        justify-content: flex-end;
+        gap: 1rem;
+        color: #000;
+        text-align:start;
+
+
     }
-    .aboutMe_explain_container ul:first-child{
-        text-align:left;
-        display: flex;
-        align-items: flex-start;
-    
-    }
+
     .AboutMe_explain_text li span{
         color: var(--khakestariRoshan);
         text-shadow: var(--textShadowDark);
         font-size: 1.4rem;
+
     }
     .closeAll{
-        top:23rem;
-        left: calc(50% - 2.5rem);
+        top:0;
+        left: 0;
         border-radius: 50%;
         width: 5rem;
         height: 5rem;
         background: var(--khakestariRoshan);
         color: var(--khakestariTire);
+        z-index: 11;
     }
     .closeAll:hover{
         background: var(--khakestariTire);
@@ -495,32 +496,34 @@ left: 0;
     width:50%;
 
     }
+    .aboutMe_explain_Photo{
+        width: 100%;
+        left: 0;
+        height: fit-content;
+    }
+
     .AboutMe_explain_text_right,
     .AboutMe_explain_text_left {
         width: 50%;
         gap: 0;
         z-index: 10;
-        padding: 10px;
+        padding: 0 10px 30px ;
         text-shadow:
-         0 0 10px #fff,
-         0 0 20px #fff,
-         0 0 30px #fff,
-         0 0 40px #fff,
-         0 0 50px #fff;
-        margin: 0;
+         0 0 10px #fff;
     }
     .AboutMe_explain_text_right li span,
     .AboutMe_explain_text_left li span {
-        text-shadow:
-         0 0 10px var(--khakestariTire),
-         0 0 20px var(--khakestariTire),
-         0 0 30px var(--khakestariTire),
-         0 0 40px var(--khakestariTire);
-         color: var(--zardRoshan);
+         color: var(--abiTire);
+         text-shadow: 0 0 5px #fff;
         }
 }
-
-
+    /* abilities explain  */
+.abilities_explain_container{
+    background: #000000ca;
+    backdrop-filter: blur(2px);
+    width: 100vw;
+    height: 100vh;
+}
 
 
 

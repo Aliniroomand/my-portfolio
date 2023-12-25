@@ -32,11 +32,6 @@ transition: 0.3s ease-in-out;
 }
 @media (width <= 425px ){
 .links_container li img{
-    width: 30px;
+    width: 25px;
 }
 }
-@media (width <= 375px ){
-    .links_container li img{
-        width: 20px;
-    }
-    }

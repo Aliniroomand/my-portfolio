@@ -76,13 +76,13 @@ const AboutMe = () => {
 {/* end of banner ________ */}
 {/* container of Infos  */}
             <section className={styles.main_container}>
-    {/* about me part */}
+{/* about me part */}
                 <section onClick={activing} id="aboutMe" className={styles.aboutMe_container}>
                     <img id="aboutMe" className={styles.aboutMe_Photo} src={myPhoto2} alt='myphoto'/>
                     <h1 id="aboutMe" className={styles.aboutMe_title}>About Me</h1>
                 </section>
-    {/*__________end of about me part */}
-    {/* skills part */}
+{/*__________end of about me part */}
+{/* skills part */}
                 <section onClick={activing} id='abilities' className={styles.abilities_container}>
                     <h1 id='abilities' className={styles.abilities_title}>Skills </h1>
                     <ul id='abilities' className={styles.abilities_explain}>
@@ -96,13 +96,13 @@ const AboutMe = () => {
                         <li  ><img id='abilities' src={git_github} alt='abilities'/></li>
                     </ul>
                 </section>
-    {/*________end of skills part */}
-    {/* projects part */}
+{/*________end of skills part */}
+{/* projects part */}
                 <section onClick={activing_projects} id='projects' className={styles.projects_container}>
                     <h1 id='projects' onClick={activing_projects} className={styles.projects_title}>Projects</h1>
                     <img id='projects' onClick={activing_projects} src={stairs} className={styles.projects_explain} alt='projects' />
                 </section>
-    {/*______end of projects part */}
+{/*______end of projects part */}
 {/* Explains part */}
             <section className={styles.explain_container}>
                 { actived.aboutMe &&
@@ -124,13 +124,12 @@ const AboutMe = () => {
                     </section>
                 }
                 { actived.abilities &&
-                    <section   className={`${styles.main_section_visible} ${styles.fadeIn}`}>
-                        <Abilities/>
-                        <button className={styles.closeAll_abilities} onClick={closeAll}>برگشت</button>
+                    <section   className={`${styles.abilities_explain_container} ${styles.fadeIn}`}>
+                        <Abilities closeAll={closeAll}/>
                     </section>
                 }
             </section>
-    {/*______ end of explain parts__________ */}
+{/*______ end of explain parts__________ */}
             </section>
 {/*________end of container of Infos_______  */}
         </section>

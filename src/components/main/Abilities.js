@@ -15,7 +15,7 @@ import Bootstrap from "../../assets/Bootstrap_logo.png"
 import { Number } from '../../helper/Helper';
 
 
-const Abilities = () => {
+const Abilities = ({closeAll}) => {
     return (
     <section className={styles.container}>
             <h1 className={styles.title_container}>
@@ -24,13 +24,13 @@ const Abilities = () => {
         <section className={styles.main_boxes_container}>
             <section className={styles.Images_container}>
                 <img src={html} alt='abilities'/>
-                <Number n={98}/>
+                <Number n={94}/>
                 <h3>HTML</h3>
 
             </section>
             <section className={styles.Images_container} >
                 <img src={css} alt='abilities'/>
-                <Number n={95}/>
+                <Number n={97}/>
                 <h3>CSS</h3>
             </section>            
             <section className={styles.Images_container}>
@@ -69,6 +69,7 @@ const Abilities = () => {
                 <h3>Bootstrap</h3>
             </section>
         </section>
+        <button className={styles.closeAll_abilities} onClick={closeAll}>Return</button>
     </section>
         
         );
