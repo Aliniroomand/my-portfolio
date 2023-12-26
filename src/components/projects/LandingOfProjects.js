@@ -78,7 +78,7 @@ const Landing_of_projects = () => {
         <AnimationForTransition>
         <div id="parentNode" className={styles.container}>
             <Link  onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
-            <h1>بعضی از پروژه ها بسیار مبتدی هستند ولی وجود پروژه های مبتدی باعث می شه میزان پیشرفتم که نشات گرفته از علاقه وپیگیری خودم هست رو بهتر نشون بده... و پروژه های حرفه ای تر نشون دهنده خلاقیت در عین تازه کار بودنم هست</h1>
+            <h1>My portfolio includes beginner-level projects that demonstrate my dedication and progress, as well as advanced projects showcasing my creativity as a newcomer</h1>
 {/* clock project______________________ */}
                 <article className={styles.clock_project}>
                     <Link onClick={showExplain}>

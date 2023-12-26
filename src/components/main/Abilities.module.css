@@ -40,7 +40,7 @@ flex: 1 1;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-border-radius: 40px;
+border-radius: 80px;
 box-shadow:inset 0 4px 5px var(--abiRoshan),inset 0 -4px 5px #9eefffaf, 0 0 10px var(--khakestariRoshan);
 height: 80%;
 overflow: hidden;
@@ -64,9 +64,9 @@ align-items: baseline;}
 .Images_container img{
     filter:  grayscale(1) drop-shadow(0 0 10px var(--khakestariRoshan));
     transition: 0.2s;
-    border-radius: 50%;
-    height: 50%;
-    width: 100%;
+    /* border-radius: 50%; */
+    height: 40%;
+    width: 80%;
     top: 0;
     
 }
@@ -281,72 +281,4 @@ right: 0;
 
 
 
-/* flip ro nakhasti pak kon */
 
-/* Animations */
-
-
-    @-webkit-keyframes flip {
-    0% {
-    -webkit-transform: perspective(800px) rotate3d(0, 1, 0, -360deg);
-    transform: perspective(800px) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    40% {
-    -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    50% {
-    -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    80% {
-    -webkit-transform: perspective(800px) scale3d(.95, .95, .95);
-    transform: perspective(800px) scale3d(.95, .95, .95);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    100% {
-    -webkit-transform: perspective(800px);
-    transform: perspective(800px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    }
-    @keyframes flip {
-    0% {
-    -webkit-transform: perspective(800px) rotate3d(0, 1, 0, -360deg);
-    transform: perspective(800px) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    40% {
-    -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    }
-    50% {
-    -webkit-transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(800px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    80% {
-    -webkit-transform: perspective(800px) scale3d(.95, .95, .95);
-    transform: perspective(800px) scale3d(.95, .95, .95);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    100% {
-    -webkit-transform: perspective(800px);
-    transform: perspective(800px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    }
-    } 

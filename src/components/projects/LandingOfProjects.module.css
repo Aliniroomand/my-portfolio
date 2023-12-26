@@ -148,7 +148,7 @@ filter: drop-shadow(-2px 2px 2px #1a1919)drop-shadow(-2px 2px 2px #000);
   position: fixed;
   left:40%;
   top: 1.5%;
-  background: #ffffff63;
+  background: var(--abiRoshan);
   opacity: 0;
   transition: opacity 0.5s;
   padding: 10px 0;
@@ -177,7 +177,7 @@ animation: flipOutX 0.5s ease both ;
   left: 38%;
   margin: 0;
   line-height: 2rem;
-  background: rgba(34, 161, 165, 0.384);
+  background: var(--banafshTire);
 
   padding: 10px;
   width: 20%;
@@ -203,7 +203,8 @@ animation: flipOutX 0.5s ease both ;
 .todoapp_project h4 span,
 .weatherapp_project h4 span,
 .digital_currency_project h4 span{
-  color: var(--abiRoshan);
+  color: var(--abiTire);
+  text-shadow: 0 0 5px #fff,0 0 10px #fff;
 }
 .clock_project img:hover,
 .calculator_project img:hover,
@@ -239,7 +240,7 @@ animation: flipInX 0.8s ease both;
 .amature_explain,
 .midLevel_explain{
   position: relative;
-  background:#ffffff75;
+  background:var(--abiRoshan);
   width: 100vw;
   height: 80vh;
   top: 5vh;
@@ -263,7 +264,7 @@ align-items: center;
 justify-content: center;
 }
 .midLevel_explain{
-  background: rgba(34, 161, 165, 0.384);
+  background: var(--banafshTire);
 backdrop-filter: blur(3px);
 }
 
@@ -440,6 +441,7 @@ transform: scale(0.8);
 
 }
 @media (width <= 425px){
+
   .clock_project h4,
 .calculator_project h4,
 .hangman_project h4,
@@ -458,10 +460,7 @@ transform: scale(0.8);
   width: 35%;
   left: 28%;
 }
-  .container h1{
-    font-size: 1.5rem;
-    left: 9%;
-    }
+
   .beauty_heaven a img{
     top: 15%;
     left: 38%;
@@ -514,8 +513,9 @@ top:42%;
 transform: scale(0.7);
 }
 .container h1{
-  font-size: 1.4rem;
-}
+  font-size: 1.3em;
+  left: 9%;
+  }
 }
 
 
