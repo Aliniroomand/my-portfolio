@@ -224,7 +224,7 @@ display: none;
             border-radius: 50px;
       }
       
-      /* Handle on hover */
+
       ::-webkit-scrollbar-thumb:hover {
         background: #000;
     }

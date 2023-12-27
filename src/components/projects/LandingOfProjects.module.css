@@ -3,7 +3,7 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
-    direction: rtl;
+    direction: ltr;
     overflow: hidden;
     perspective: 500px;
 }
@@ -63,6 +63,7 @@ color: var(--ghermezRoshan);
 .beauty_heaven a img{
   position: fixed;
   transition: 0.5s;
+  z-index: 9;
 }
 
 
@@ -152,14 +153,14 @@ filter: drop-shadow(-2px 2px 2px #1a1919)drop-shadow(-2px 2px 2px #000);
   opacity: 0;
   transition: opacity 0.5s;
   padding: 10px 0;
-  color: var(--zardRoshan);
+  color: var(--ghermezTire);
   border-radius: 30px;
   font-size: 1.2rem;
   text-align: center;
   text-wrap: wrap;
   width: 15%;
   font-family: var(--fa2);
-  text-shadow: 0 0 7px #000,0 0 10px #000;
+  text-shadow: 0 0 3px #ffffff,0 0 10px #ffffff;
   line-height: 1.5rem;
 animation: flipOutX 0.5s ease both ;
   box-shadow: 0 0 10px var(--khakestariTire),inset 0 0 10px var(--khakestariTire),inset 0 0 20px var(--khakestariRoshan);
@@ -172,7 +173,7 @@ animation: flipOutX 0.5s ease both ;
 .beauty_heaven h4{
   font-size: 1.2rem;
   color: var(--zardRoshan);
-  text-shadow: 0 0 0px #000,0 0 5px #000;
+  text-shadow: 0 0 2px #000,0 0 10px #000;
   top: 0%;
   left: 38%;
   margin: 0;
@@ -188,8 +189,8 @@ animation: flipOutX 0.5s ease both ;
 .LAB h4 span,
 .iranTint h4 span,
 .beauty_heaven h4 span{
-  color: var(--khakestariTire);
-  text-shadow: 0 0 5px #fff;
+  color: #000;
+  text-shadow: 0 0 2px #fff, 0 0 10px #fff;
 }
 .iranTint h4 article,
 .beauty_heaven h4 article{
@@ -206,15 +207,15 @@ animation: flipOutX 0.5s ease both ;
   color: var(--abiTire);
   text-shadow: 0 0 5px #fff,0 0 10px #fff;
 }
-.clock_project img:hover,
-.calculator_project img:hover,
-.hangman_project img:hover,
-.todoapp_project img:hover,
-.weatherapp_project img:hover,
-.digital_currency_project img:hover,
-.LAB img:hover,
-.iranTint img:hover,
-.beauty_heaven img:hover{
+.clock_project img:hover:not(.close_explain),
+.calculator_project img:hover:not(.close_explain),
+.hangman_project img:hover:not(.close_explain),
+.todoapp_project img:hover:not(.close_explain),
+.weatherapp_project img:hover:not(.close_explain),
+.digital_currency_project img:hover:not(.close_explain),
+.LAB img:hover:not(.close_explain),
+.iranTint img:hover:not(.close_explain),
+.beauty_heaven img:hover:not(.close_explain){
   filter:contrast(120%) drop-shadow(-8px 8px 4px #1a1919);
   transform:scale(1.2);
   transition:all 1s;
@@ -245,14 +246,13 @@ animation: flipInX 0.8s ease both;
   height: 80vh;
   top: 5vh;
   margin: 0;
-  left:0 ;
   text-align: center;
   font-size: 1.7rem;
   line-height: 2rem;
   z-index: 10;
   border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  font-family: var(--fa3);
+  box-shadow: rgba(0, 0, 0, 0.396) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px,
+   rgba(0, 0, 0, 0.362) 0px 23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px 36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px 79px 40px 0px inset;
   backdrop-filter: blur(2.5px);
   font-weight: 900;
   text-shadow: 0 0 10px #fff, 0 0 10px #fff;
@@ -266,37 +266,64 @@ justify-content: center;
 .midLevel_explain{
   background: var(--banafshTire);
 backdrop-filter: blur(3px);
+
 }
 
 .amature_explain ul,
 .midLevel_explain ul{
-  padding-inline: 10px;
   list-style-type: none;
+  height: 80%;
+  top: 5%;
+  bottom: 15%;
+  padding: 0;
 }
 .amature_explain section,
-.midLevel_explain section{
-  margin-top: 20px;
+.midLevel_explain section a{
+  height: 5%;
+  bottom: 1%;
+  width: 50%;
+  left: 25%;
+  position: absolute;
 }
 .amature_explain ul li:nth-child(2n) {
   color: var(--ghermezTire);
+  padding:0;
 }
 .amature_explain ul li:nth-child(2n-1) {
   color: var(--abiTire);
+  padding:0;
 }
-.midLevel_explain ul li:nth-child(2n-1){
-  color: #000;
+.midLevel_explain ul li:nth-child(2n-1):not(.midLevel_explain_details_CarDetailing){
+  color: var(--khakestariTire);
+  padding:0;
   font-weight: 900;
   font-size: 2rem;
-  text-shadow: 0 0 10px #ffffff;
+  text-shadow: 0 0 3px #ffffff;
+  height: calc(100% / 8);
+  width:80%;
+  margin-inline:10%;
+  
 }
-.midLevel_explain ul li:nth-child(2n) {
+.midLevel_explain ul li:nth-child(2n):not(.midLevel_explain_details_CarDetailing){
   color: var(--zardRoshan);
   text-shadow: 0 0 5px #000;
+  height: calc(100% / 13);
+  width:80%;
+  margin-inline:10%;
+  padding:0;
 }
 
 .midLevel_explain_details{
-  font-size: 1.5rem;
-  line-height: 1.6rem;
+  font-size: 1.7rem;
+}
+.midLevel_explain_details_CarDetailing{
+  overflow-y: scroll;
+  color: var(--zardRoshan);
+  text-shadow: 0 0 5px #000;
+  height: calc(100% / 10);
+  width:80%;
+  height: 20%;
+  margin-inline: 10%;
 }
 .close_explain{
   width: 2rem;
@@ -305,12 +332,36 @@ backdrop-filter: blur(3px);
   left: 1rem;
   top: 1rem;
   transform: rotateZ(90deg);
-  transition: 0.5s;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 1px #fff)drop-shadow(0 0 3px #fff);
+}
+.close_explain:hover{
+  filter: drop-shadow(0 0 1px #fff)drop-shadow(0 0 3px #fff)drop-shadow(0 0 8px #fff)drop-shadow(0 0 10px #fff);
+  transform: rotateZ(0deg);
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background: var(--zardTire);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--zardRoshan);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ghermezTire);
 }
 
 .go_to_project{
-  width: 15rem;
-  height: 2rem;
+  bottom: 0;
   border: none;
   background:none;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -517,7 +568,9 @@ transform: scale(0.7);
   left: 9%;
   }
 }
-
+@media (width < 375px){
+  /* explain haaro dorost kon */
+}
 
 
 
