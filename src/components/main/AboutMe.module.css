@@ -38,11 +38,19 @@ left: 0;
     border-radius: 500px;
 }
 .aboutMe_Photo{
-    width:clamp(11rem,16rem,16rem);
-    filter:drop-shadow( -3px 1px 3px #3d3d3d) drop-shadow( 3px -1px 3px #3d3d3d)drop-shadow( -3px 1px 6px #8f8f8f) ;
+    width:clamp(11rem,14rem,14rem);
+    filter:drop-shadow( 0 0 5px #3d3d3d);
     left: 0;
     border-radius: 100px;
     height: 100%;
+    border:1px solid #3d3d3d;
+    box-shadow:
+    inset 0 0 10px #3d3d3d,
+    inset 0 0 5px #3d3d3d,
+    0 0 5px #3d3d3d,
+    0 0 10px #3d3d3d;
+    
+   
 
 }
 .aboutMe_title{
@@ -237,7 +245,7 @@ left: 0;
 }
 .aboutMe_explain_Photo{
     background: url(../../assets/bgg.png);
-    width: 25rem;
+    width: 20rem;
     top: 1rem;
     position: absolute;
     left: calc(50vw - 15rem);
@@ -253,19 +261,19 @@ left: 0;
     z-index: 10;
     color: var(--khakestariRoshan);
     text-shadow: var(--textShadowDark),0 0 20px #000,0 0 40px #000,0 0 50px #000;
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 5rem;
     position: fixed;
     bottom: 0;
-    left: calc(50% - 15rem);
     text-align: center;
+    left: auto;
     
 }
 
 
 
 /* Media queries */
-@media (width <= 1024px ){
+@media (width <= 1440px ){
     .aboutMe_title{
     font-size: 3rem;
     }
@@ -286,7 +294,7 @@ left: 0;
         justify-content: space-between;
     }
     .aboutMe_explain_Photo{
-    width: max(40%,20rem);
+    width: max(35%,20rem);
     border:1px solid #a7a7a7;
     
     top:0;
@@ -297,10 +305,10 @@ left: 0;
     .aboutMe_explain_name{
         font-size: 5rem;
         right:0;
-        left: 59%;
+        /* left: 59%; */
         z-index: 0;
         position: fixed;
-        width: 40%;
+        width: 39%;
 
     }
     .AboutMe_explain_text_right,

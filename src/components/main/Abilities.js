@@ -65,7 +65,7 @@ const Abilities = ({closeAll}) => {
             </section>
             <section className={`${styles.Images_container} ${styles.github_container}`}>
                 <img src={Bootstrap} alt='Bootstrap'/>
-                <h4>Coming Soon ... </h4>
+                <h4>Coming Soon... </h4>
                 <h3>Bootstrap</h3>
             </section>
         </section>

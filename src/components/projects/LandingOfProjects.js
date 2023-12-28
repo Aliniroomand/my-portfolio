@@ -77,7 +77,7 @@ const Landing_of_projects = () => {
     return (
         <AnimationForTransition>
         <div id="parentNode" className={styles.container}>
-            <Link  onClick={goBack} className={styles.return_button}><h4>برگشت</h4></Link>
+            <Link  onClick={goBack} className={styles.return_button}><h4>Return</h4></Link>
             <h1>My portfolio includes beginner-level projects that demonstrate my dedication and progress, as well as advanced projects showcasing my creativity as a newcomer</h1>
 {/* clock project______________________ */}
                 <article className={styles.clock_project}>
