@@ -158,8 +158,8 @@ z-index: 10;
 .main_section_visible{
 backdrop-filter:blur(3px);
 background-color: rgba(0, 0, 0, 0.849);
-height: 100vh;
-width: 100vw;
+height: 100svh;
+width: 100svw;
 position: fixed;
 overflow: hidden;
 perspective: 300px;
@@ -504,6 +504,9 @@ left: 0;
     width:50%;
 
     }
+    .main_section_visible{
+        
+    }
     .aboutMe_explain_Photo{
         width: 100%;
         left: 0;
@@ -517,6 +520,7 @@ left: 0;
         padding: 0 10px 30px ;
         text-shadow:
          0 0 10px #fff;
+         margin-bottom: 10rem;
     }
     .AboutMe_explain_text_right li span,
     .AboutMe_explain_text_left li span {

@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100svw;
+    height: 100svh;
     padding: 10px;
 
 }
@@ -233,7 +233,9 @@ display: none;
 .numbers{
     font-size: 2em;
 }
-
+.main_boxes_container{
+    height: 50%;
+}
 .Images_container{
     height: 50%;
     text-align: center;
@@ -244,6 +246,10 @@ display: none;
     left: 0;
     position: absolute;
 }
+.closeAll_abilities{
+    height: 10%;
+    bottom: 10svh;
+}
 }
 @media (width <= 375px ){
     .title_container{
@@ -253,6 +259,7 @@ display: none;
         padding: 10px; 
         width:90%       
     }    
+
     .numbers,
     .Images_container h4{
         font-size: 1rem;
