@@ -491,7 +491,6 @@ left: 0;
         width: 48%;
     }
     .aboutMe_Photo{
-        width: fit-content;
     }
     .aboutMe_title{
         font-size: 1.8rem;
@@ -508,7 +507,6 @@ left: 0;
     .aboutMe_explain_Photo{
         width: 100%;
         left: 0;
-        height: fit-content;
     }
 
     .AboutMe_explain_text_right,
