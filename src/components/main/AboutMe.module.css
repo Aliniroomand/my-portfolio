@@ -15,7 +15,7 @@ line-height: 0;
 left: 0;
 }
 .siteTitle{
-    text-align: center;
+    text-align: left;
     font-size: 2.5rem;
     text-wrap: wrap;
     left: 0;
@@ -24,6 +24,7 @@ left: 0;
     font-family: var(--en2);
     top: 2rem;
     margin-inline: 3px;
+    padding-left: 10px;
 }
 .main_container{
     width: 50vw;
@@ -281,7 +282,7 @@ left: 0;
         width: 40%;
     }
     .siteTitle{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .main_container{
         width: 60%;
