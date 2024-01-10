@@ -10,7 +10,7 @@ import redux from '../../assets/redux.png'
 import seo from '../../assets/seo.png'
 import wordpress from '../../assets/wordpress.png'
 import git_github from "../../assets/Git logo.png"
-import Bootstrap from "../../assets/Bootstrap_logo.png"
+import tailwind from "../../assets/tailwind-logo.svg"
 //helper
 import { Number } from '../../helper/Helper';
 
@@ -63,10 +63,10 @@ const Abilities = ({closeAll}) => {
                 <Number n={90}/>
                 <h3>Git and Github</h3>
             </section>
-            <section className={`${styles.Images_container} ${styles.github_container}`}>
-                <img src={Bootstrap} alt='Bootstrap'/>
-                <h4>Coming Soon... </h4>
-                <h3>Bootstrap</h3>
+            <section className={`${styles.Images_container}`}>
+                <img src={tailwind} alt='tailwind'/>
+                <Number n={75}/>
+                <h3>tailwind</h3>
             </section>
         </section>
         <button className={styles.closeAll_abilities} onClick={closeAll}>Return</button>
