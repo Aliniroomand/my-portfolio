@@ -3,14 +3,14 @@ import { TypeAnimation } from 'react-type-animation';
 
 //images
 import myPhoto2 from '../../assets/profile photo 2.png'
-import html from '../../assets/html.png'
-import css from '../../assets/css.png'
-import js from '../../assets/javascript.png'
-import react from '../../assets/react.png'
-import redux from '../../assets/redux.png'
-import seo from '../../assets/seo.png'
-import wordpress from '../../assets/wordpress.png'
-import git_github from "../../assets/Git logo.png"
+import html from '../../assets/skills/html.png'
+import css from '../../assets/skills/css.png'
+import js from '../../assets/skills/javascript.png'
+import react from '../../assets/skills/react.png'
+import redux from '../../assets/skills/redux.png'
+import seo from '../../assets/skills/seo.png'
+import wordpress from '../../assets/skills/wordpress.png'
+import git_github from "../../assets/skills/Git logo.png"
 import stairs from '../../assets/backgrounds/stairs.jpg'
 
 //components

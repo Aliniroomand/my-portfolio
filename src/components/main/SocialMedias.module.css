@@ -26,6 +26,12 @@ filter: contrast(200%) brightness(200%);
 transition: 0.3s ease-in-out;
 }
 @media (width <= 768px ){
+    .container h5{
+        text-shadow:0 0 10px #9eefff;
+     
+       color: #000;
+    
+    }
 .links_container li img{
     width: 1.5rem;
 }
@@ -34,4 +40,5 @@ transition: 0.3s ease-in-out;
 .links_container li img{
     width: 25px;
 }
+
 }

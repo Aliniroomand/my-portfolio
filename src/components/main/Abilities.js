@@ -2,15 +2,17 @@ import React from 'react';
 //styles
 import styles from './Abilities.module.css'
 //images
-import html from '../../assets/html.png'
-import css from '../../assets/css.png'
-import js from '../../assets/javascript.png'
-import react from '../../assets/react.png'
-import redux from '../../assets/redux.png'
-import seo from '../../assets/seo.png'
-import wordpress from '../../assets/wordpress.png'
-import git_github from "../../assets/Git logo.png"
-import tailwind from "../../assets/tailwind-logo.svg"
+import html from '../../assets/skills/html.png'
+import css from '../../assets/skills/css.png'
+import js from '../../assets/skills/javascript.png'
+import react from '../../assets/skills/react.png'
+import redux from '../../assets/skills/redux.png'
+import typeScript from '../../assets/skills/typeScript Logo.png'
+import wordpress from '../../assets/skills/wordpress.png'
+import git_github from "../../assets/skills/Git logo.png"
+import tailwind from "../../assets/skills/tailwind-logo.svg"
+import GraphQL from "../../assets/skills/GraphQL Logo.png"
+import RestAPI from "../../assets/skills/RestAPI Logo.png"
 //helper
 import { Number } from '../../helper/Helper';
 
@@ -49,9 +51,9 @@ const Abilities = ({closeAll}) => {
                 <h3>Redux</h3>
             </section>            
             <section className={styles.Images_container}>
-                <img src={seo} alt='abilities'/>
-                <Number n={20}/>
-                <h3>SEO</h3>
+                <img src={typeScript} alt='abilities'/>
+                <Number n={50}/>
+                <h3>typeScript</h3>
             </section>            
             <section className={styles.Images_container}>
                 <img src={wordpress} alt='abilities'/>
@@ -67,6 +69,16 @@ const Abilities = ({closeAll}) => {
                 <img src={tailwind} alt='tailwind'/>
                 <Number n={75}/>
                 <h3>tailwind</h3>
+            </section>
+            <section className={`${styles.Images_container}`}>
+                <img src={GraphQL} alt='GraphQL'/>
+                <Number n={80}/>
+                <h3>GraphQL</h3>
+            </section>
+            <section className={`${styles.Images_container}`}>
+                <img src={RestAPI} alt='RestAPI'/>
+                <Number n={80}/>
+                <h3>RestAPI</h3>
             </section>
         </section>
         <button className={styles.closeAll_abilities} onClick={closeAll}>Return</button>

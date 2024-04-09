@@ -448,8 +448,10 @@ left: 0;
         margin-top: 0;
         justify-content: flex-end;
         gap: 1rem;
-        color: #000;
+        color: #9eefff;
         text-align:start;
+    text-shadow:0 0 1px #000;
+
 
 
     }
@@ -519,13 +521,13 @@ left: 0;
         z-index: 10;
         padding: 0 10px 30px ;
         text-shadow:
-         0 0 10px #fff;
+         0 0 10px #000000;
          margin-bottom: 10rem;
     }
     .AboutMe_explain_text_right li span,
     .AboutMe_explain_text_left li span {
-         color: var(--abiTire);
-         text-shadow: 0 0 5px #fff;
+         color: var(--zardRoshan);
+         text-shadow: 0 0 5px #000000;
         }
 }
     /* abilities explain  */
