@@ -213,16 +213,16 @@ const Landing_of_projects = () => {
                         <li>: Project's Name</li>
                         <li>Todo App</li>
                         <li>: Languages</li>
-                        <li>HTML , css , JS </li>
+                        <li>HTML , css , TS </li>
                         <li>: Explain</li>
-                        <li>A beginner project for practicing JS and CSS concepts and also practicing some concepts Like LocalStorage</li>
+                        <li>A beginner project for practicing TS and CSS concepts and also practicing some concepts Like LocalStorage</li>
                         <li>:Level</li>
                         <li>Beginner</li>
                     </ul>
                     <section>
                         <Link 
                             target='_blank' 
-                            to="https://aliniroomand.github.io/todo-list-Amature-"
+                            to="https://todo-app-ts-js.vercel.app/"
                             className={styles.go_to_project}>
                                 !! Show Me 
                         </Link> 
